@@ -4,7 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an AstroWind-based website built with Astro 5.0 and Tailwind CSS. It's a static site generator template focused on high performance and SEO optimization. The project includes a blog system, multiple page layouts, and extensive widget components for creating modern websites.
+This is the **Mobile-Tech, LLC** business website built with Astro 5.0 and Tailwind CSS. It's a professional service website focused on tech support services in Tucson, Arizona. The site targets elderly customers and families who need patient, friendly computer help.
+
+## Business Information
+
+- **Company**: Mobile-Tech, LLC (comma is legally required)
+- **Location**: Tucson, Arizona area
+- **Phone**: (520) 314-7152
+- **Email**: mobiletechllcaz@gmail.com
+- **Services**: In-home tech support, computer repair, mobile device help, internet setup, TV/streaming installation
+- **Target Audience**: Elderly customers and boomers (but welcoming to all ages)
+- **Logo**: Located at `src/assets/images/Mobile-Tech-LLC.png`
+
+## Service Categories
+
+Based on the marketing document, Mobile-Tech LLC provides:
+
+### Tech Support
+- Computer speed issues, virus removal, hard drive cleanup
+- Password management and security (Bitwarden setup)
+- Email problems (Gmail, Yahoo, Outlook)
+- WiFi router and internet troubleshooting
+- Software training and general support
+- Cloud storage setup (Google Drive, Dropbox, OneDrive)
+
+### Hardware Services
+- RAM/SSD upgrades and computer replacement
+- System reimaging and deep cleaning
+- Printer setup (preferring laser printers)
+- PC to Mac migration assistance
+
+### Mobile & A/V
+- iPhone, iPad, Android setup and support
+- Apple TV integration
+- TV mounting, streaming service setup
+- Remote control programming
+- Security camera installation (Reolink)
+
+## Website Messaging Strategy
+
+### Key Value Propositions
+- **Mobile Service**: "We Come to You" - no need to transport equipment
+- **Patient Approach**: "No judgment, no confusing tech talk"
+- **Local Business**: Tucson community focus
+- **Honest Pricing**: Clear, upfront costs
+- **Same-day service** availability
+
+### Target Audience Considerations
+- Use simple, non-technical language
+- Address common tech anxieties
+- Emphasize patience and understanding
+- Focus on real problems customers face
+- Include reassuring messaging like "You're Not Alone"
 
 ## Key Commands
 
@@ -40,7 +91,7 @@ This is an AstroWind-based website built with Astro 5.0 and Tailwind CSS. It's a
 - `src/pages/`: File-based routing with dynamic blog routes
 - `src/utils/`: Helper functions for permalinks, images, blog logic
 - `src/data/post/`: Blog posts in MD/MDX format
-- `vendor/`: Custom AstroWind integration
+- `vendor/`: Custom Mobile-Tech, LLC integration
 
 ### Configuration
 - `src/config.yaml`: Site metadata, SEO, blog settings, analytics
