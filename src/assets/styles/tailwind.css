@@ -85,8 +85,8 @@
   stroke: currentColor;
 }
 
-[astro-icon] svg[fill*="blue"],
-[astro-icon] svg path[fill*="blue"] {
+[astro-icon] svg[fill*='blue'],
+[astro-icon] svg path[fill*='blue'] {
   fill: currentColor !important;
 }
 

@@ -13,7 +13,7 @@ This is the **Mobile-Tech, LLC** business website built with Astro 5.0 and Tailw
 - **Phone**: 520-314-7152 (standardized format across all pages)
 - **Email**: mobiletechllcaz@gmail.com
 - **Services**: Two-tier service model - Residential tech support AND Enterprise L3/4+ solutions
-- **Target Audience**: 
+- **Target Audience**:
   - **Residential**: Elderly customers and families (but welcoming to all ages)
   - **Commercial**: Businesses requiring enterprise-grade infrastructure
 - **Logo**: Located at `src/assets/images/Mobile-Tech-LLC.png`
@@ -23,6 +23,7 @@ This is the **Mobile-Tech, LLC** business website built with Astro 5.0 and Tailw
 Mobile-Tech LLC operates a **two-tier service model**:
 
 ### RESIDENTIAL SERVICES (Consumer/Family Focus)
+
 - Computer speed issues, virus removal, hard drive cleanup
 - Password management and security (Bitwarden setup)
 - Email problems (Gmail, Yahoo, Outlook)
@@ -41,6 +42,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - **Technology purchasing consultation**: Research and help customers choose new computers, TVs, A/V equipment, and streaming devices
 
 ### COMMERCIAL SERVICES (Enterprise L3/4+ Solutions)
+
 - **Enterprise File Servers**: 100TB+ custom builds, 24/7/365 uptime (10+ years proven)
 - **Large-Scale Networking**: 8,000+ sqft installations, 10G infrastructure, Cat6a runs
 - **Security Camera Systems**: Enterprise surveillance with offsite recording
@@ -56,6 +58,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 ## Website Navigation Structure
 
 ### Main Menu
+
 - **Services** (NEW dropdown menu positioned first)
   - **Residential**: `/services/residential` - Family/consumer tech support
   - **Commercial**: `/services/commercial` - Enterprise L3/4+ solutions
@@ -67,6 +70,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 ## Website Messaging Strategy
 
 ### RESIDENTIAL Messaging
+
 - **Mobile Service**: "We Come to You" - no need to transport equipment
 - **Patient Approach**: "No judgment, no confusing tech talk"
 - **Local Business**: Tucson community focus
@@ -76,6 +80,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - **Language**: Simple, non-technical, reassuring ("You're Not Alone")
 
 ### COMMERCIAL Messaging
+
 - **Enterprise Expertise**: L3/4+ solutions with proven track record
 - **Cost-Effective**: Example: $17.5k for 400TB server vs. higher competitor pricing
 - **Proven Reliability**: 10+ years of 24/7/365 uptime on critical systems
@@ -83,6 +88,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - **Real Project Examples**: Specific technical implementations and results
 
 ### Additional Messaging Guidelines
+
 - **Technology Purchasing Consultation**: Position as trusted advisor vs. sales pressure from big box stores
 - **Unbiased Recommendations**: Emphasize research-based advice tailored to customer's actual needs and budget
 - **Value Proposition**: "We help you choose the right technology" not "we sell you technology"
@@ -90,22 +96,23 @@ Mobile-Tech LLC operates a **two-tier service model**:
 
 ## Key Commands
 
-| Command | Purpose |
-|---------|---------|
-| `npm run dev` | Start development server at localhost:4321 |
-| `npm run build` | Build production site to ./dist/ |
-| `npm run preview` | Preview production build locally |
-| `npm run check` | Run all checks (Astro, ESLint, Prettier) |
-| `npm run check:astro` | Run Astro type checking |
-| `npm run check:eslint` | Run ESLint checks |
-| `npm run check:prettier` | Check Prettier formatting |
-| `npm run fix` | Auto-fix ESLint and Prettier issues |
-| `npm run fix:eslint` | Auto-fix ESLint issues |
-| `npm run fix:prettier` | Auto-format with Prettier |
+| Command                  | Purpose                                    |
+| ------------------------ | ------------------------------------------ |
+| `npm run dev`            | Start development server at localhost:4321 |
+| `npm run build`          | Build production site to ./dist/           |
+| `npm run preview`        | Preview production build locally           |
+| `npm run check`          | Run all checks (Astro, ESLint, Prettier)   |
+| `npm run check:astro`    | Run Astro type checking                    |
+| `npm run check:eslint`   | Run ESLint checks                          |
+| `npm run check:prettier` | Check Prettier formatting                  |
+| `npm run fix`            | Auto-fix ESLint and Prettier issues        |
+| `npm run fix:eslint`     | Auto-fix ESLint issues                     |
+| `npm run fix:prettier`   | Auto-format with Prettier                  |
 
 ## Architecture
 
 ### Core Structure
+
 - **Framework**: Astro 5.0 with TypeScript
 - **Styling**: Tailwind CSS with custom design tokens
 - **Content**: MDX support for blog posts with frontmatter
@@ -113,6 +120,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - **Icons**: Astro Icon with Tabler and Flat Color Icons
 
 ### Key Directories
+
 - `src/components/`: Reusable components organized by category
   - `widgets/`: Major page sections (Header, Hero, Features, etc.)
   - `ui/`: Base UI components (Button, Form, Timeline, etc.)
@@ -125,24 +133,28 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - `vendor/`: Custom Mobile-Tech, LLC integration
 
 ### Configuration
+
 - `src/config.yaml`: Site metadata, SEO, blog settings, analytics
 - `src/navigation.ts`: Header and footer navigation structure
 - `astro.config.ts`: Astro configuration with integrations
 - `tailwind.config.js`: Tailwind customization with design tokens
 
 ### Content Management
+
 - Blog posts use frontmatter for metadata
 - Dynamic routing handles categories, tags, and pagination
 - Content collections configured in `src/content/config.ts`
 - Images optimized through Astro's asset pipeline
 
 ### Styling System
+
 - Custom CSS variables in `src/assets/styles/tailwind.css`
 - Design tokens for colors, fonts defined in Tailwind config
 - Dark mode support via class strategy
 - Custom animations and fade effects
 
 ### Performance Features
+
 - Static site generation with optional hybrid/server modes
 - Image optimization with Sharp
 - CSS/JS/HTML compression via astro-compress
@@ -153,6 +165,7 @@ Mobile-Tech LLC operates a **two-tier service model**:
 This project has been customized for **Mobile-Tech LLC** brand colors. The brand palette includes:
 
 ### Brand Color Palette
+
 - **Primary**: #816bb1 (Purple accent from logo)
 - **Secondary**: #d7ab87 (Warm tan from logo)
 - **Dark**: #1e1a2e (Main dark purple from logo)
@@ -160,21 +173,23 @@ This project has been customized for **Mobile-Tech LLC** brand colors. The brand
 - **Light**: #342a48 (Light purple shade)
 
 ### Color Implementation
+
 - **CSS Variables**: Brand colors defined in `src/components/CustomStyles.astro`
 - **Tailwind Classes**: Available as `brand-dark`, `brand-medium`, `brand-light`, `brand-text`, `brand-accent`
 - **Light Mode**: Uses dark purple text on white backgrounds for contrast
 - **Dark Mode**: Uses warm tan text on dark purple backgrounds
 
 ### Important Color Guidelines
+
 - **Always use Tabler icons** instead of flat-color-icons for consistent brand coloring
 - **Icon styling**: Use `text-[#816bb1]` for explicit brand purple on icons
 - **Panel backgrounds**: Use `bg-white dark:bg-brand-medium` for card components
 - **Borders**: Use `border-brand-light/20` for subtle branded borders
 
 ### Common Brand Color Patterns
+
 ```astro
-<!-- Icon with brand color -->
-icon: 'w-12 h-12 mb-6 text-[#816bb1]'
+<!-- Icon with brand color -->icon: 'w-12 h-12 mb-6 text-[#816bb1]'
 
 <!-- Panel with brand backgrounds -->
 panel: 'bg-white dark:bg-brand-medium border border-brand-light/20'
