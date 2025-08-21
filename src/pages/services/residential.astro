@@ -1,0 +1,224 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Residential Tech Support Services — Mobile-Tech, LLC',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Residential Services"
+    title="Home Technology Support in Tucson"
+    subtitle="We help families and individuals with all their home technology needs. From slow computers to WiFi problems, we make technology simple and stress-free."
+    actions={[
+      { 
+        variant: 'primary', 
+        text: 'Call for Help', 
+        href: 'tel:520-314-7152',
+        icon: 'tabler:phone'
+      },
+      {
+        variant: 'secondary',
+        text: 'Send Email',
+        href: 'mailto:mobiletechllcaz@gmail.com',
+        icon: 'tabler:mail',
+      }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Home tech support services',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Complete Home Tech Support"
+    subtitle="These are the most common issues we solve for homeowners every day."
+    columns={2}
+    items={[
+      {
+        title: 'Computer Running Slow or Acting Up',
+        description:
+          'Virus removal, cleaning up your hard drive, making your computer fast again. We fix computers that freeze, crash, or won\'t start properly.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Phone & iPad Help',
+        description:
+          'iPhone, iPad, and Android setup and troubleshooting. Help with apps, photos, texting, email, and making your devices easier to use.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Internet & WiFi Problems',
+        description:
+          'Can\'t get online? WiFi not working in some rooms? We fix internet problems and help you get better, faster internet service throughout your home.',
+        icon: 'tabler:wifi',
+      },
+      {
+        title: 'Email & Password Issues',
+        description:
+          'Gmail, Yahoo, Outlook problems. Forgotten passwords, can\'t log in, or need help organizing your email and setting up secure passwords.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'TV & Streaming Setup',
+        description:
+          'Setting up Netflix, Hulu, Disney+, mounting TVs, programming remote controls, and switching from cable to streaming services like Roku or Apple TV.',
+        icon: 'tabler:device-tv',
+      },
+      {
+        title: 'Backing Up Your Photos & Files',
+        description:
+          'Don\'t lose your precious photos and important documents! We help save your files to the cloud and show you how to keep them safe forever.',
+        icon: 'tabler:photo',
+      },
+      {
+        title: 'Printer Setup & Problems',
+        description:
+          'Setting up new printers, fixing printing issues, connecting wireless printers, and helping you print from your phone or tablet.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Smart Home Setup',
+        description:
+          'Security cameras, smart doorbells, voice assistants (Alexa, Google), smart thermostats, and other connected home devices.',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Computer Hardware Upgrades',
+        description:
+          'Upgrading RAM and SSD drives to make older computers faster, replacing broken computers, and helping you choose the right new equipment.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Software Training',
+        description:
+          'Learn to use your computer, phone, or tablet more effectively. Training on banking apps, video calling, online shopping, and staying safe online.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'PC to Mac Migration',
+        description:
+          'Thinking of switching to a Mac? We help transfer all your files, photos, and settings from your old PC to your new Mac computer.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Virus & Malware Removal',
+        description:
+          'Getting scary pop-ups or suspicious emails? We remove viruses, malware, and other threats, then show you how to stay protected.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'We Come to Your Home',
+        description:
+          'No need to unplug your computer or drive anywhere. We come to your house at a time that\'s convenient for you.',
+        icon: 'tabler:home-move',
+      },
+      {
+        title: 'Patient & Understanding',
+        description:
+          'We explain everything in plain English and never make you feel rushed or embarrassed about asking questions. Technology should be simple.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Honest, Upfront Pricing',
+        description:
+          'Clear pricing with no hidden fees or surprises. We only recommend what you actually need - no overselling or pressure tactics.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Same-Day Service Available',
+        description:
+          'Need help urgently? We often can come the same day you call, especially for critical issues that affect your daily routine.',
+        icon: 'tabler:clock',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Professional home tech support',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Tucson Families Choose Us</h3>
+      We understand that every home has different technology needs. That's why we take the time to understand your specific situation.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '"My computer is so slow I want to throw it out the window"',
+        description:
+          'We hear this all the time! Usually it just needs a good cleaning, virus removal, and some optimization. Most computers can run like new again.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: '"I keep getting scary messages about viruses"',
+        description:
+          'These are often fake scare tactics, but we can remove real threats and show you how to tell the difference between real and fake warnings.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: '"My WiFi doesn\'t work in my bedroom"',
+        description:
+          'Dead zones are common in larger homes. We can extend your WiFi coverage so you get strong internet everywhere in your house.',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: '"I can\'t remember any of my passwords"',
+        description:
+          'Password managers make this easy! We set up a secure system so you only need to remember one master password for everything.',
+        icon: 'tabler:key',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Common computer problems solved',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Common Problems We Solve</h3>
+      These are real things our customers tell us every day. Sound familiar? We can help!
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Call Now: (520) 314-7152',
+        href: 'tel:520-314-7152',
+        icon: 'tabler:phone',
+      },
+      {
+        variant: 'secondary',
+        text: 'Send Email',
+        href: 'mailto:mobiletechllcaz@gmail.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Ready to Get Your Home Technology Working?"
+    subtitle="Call us today for friendly, patient tech support at your home. Same-day service available!"
+  />
+</Layout>

@@ -1,0 +1,224 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Commercial Tech Support Services — Mobile-Tech, LLC',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Commercial Services"
+    title="Business Technology Support in Tucson"
+    subtitle="Keep your business running smoothly with reliable tech support. We help small businesses, offices, and professional practices stay productive and secure."
+    actions={[
+      { 
+        variant: 'primary', 
+        text: 'Call for Business Support', 
+        href: 'tel:520-314-7152',
+        icon: 'tabler:phone'
+      },
+      {
+        variant: 'secondary',
+        text: 'Email Us',
+        href: 'mailto:mobiletechllcaz@gmail.com',
+        icon: 'tabler:mail',
+      }
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Business tech support services',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Professional Business Tech Support"
+    subtitle="Comprehensive technology solutions to keep your business running efficiently and securely."
+    columns={2}
+    items={[
+      {
+        title: 'Network Setup & Management',
+        description:
+          'Business WiFi setup, wired networks, network security, and ensuring reliable internet connectivity throughout your office space.',
+        icon: 'tabler:network',
+      },
+      {
+        title: 'Computer & Server Maintenance',
+        description:
+          'Regular maintenance, performance optimization, hardware upgrades, and server management to keep your systems running smoothly.',
+        icon: 'tabler:server',
+      },
+      {
+        title: 'Business Email Solutions',
+        description:
+          'Professional email setup, Microsoft 365, Gmail for Business, email security, and training your staff on email best practices.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Data Backup & Recovery',
+        description:
+          'Automated backup systems, cloud storage solutions, and data recovery services to protect your critical business information.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Security & Virus Protection',
+        description:
+          'Business-grade antivirus, firewall configuration, security audits, and staff training on cybersecurity best practices.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Point of Sale (POS) Systems',
+        description:
+          'Setup and maintenance of retail POS systems, payment processing integration, and inventory management software.',
+        icon: 'tabler:cash-register',
+      },
+      {
+        title: 'Business Phone Systems',
+        description:
+          'VoIP phone system setup, call routing, voicemail configuration, and integration with your existing business tools.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Remote Access Solutions',
+        description:
+          'Secure remote access for employees, VPN setup, and remote desktop solutions for working from home or multiple locations.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Office Equipment Setup',
+        description:
+          'Printers, scanners, copiers, conference room technology, and integrating all your office equipment with your network.',
+        icon: 'tabler:printer',
+      },
+      {
+        title: 'Software Training & Support',
+        description:
+          'QuickBooks, Microsoft Office, industry-specific software training, and ongoing support for your business applications.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Website & Online Presence',
+        description:
+          'Basic website setup, online business listings, social media setup, and helping you establish a professional online presence.',
+        icon: 'tabler:world-www',
+      },
+      {
+        title: 'Technology Consulting',
+        description:
+          'IT planning, technology assessments, equipment recommendations, and helping you make informed decisions about your tech needs.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'On-Site Business Support',
+        description:
+          'We come to your business location, minimizing downtime and disruption to your operations. Available during business hours or after-hours as needed.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Small Business Focus',
+        description:
+          'We understand the unique needs of small businesses in Tucson. Practical solutions that fit your budget and actually solve your problems.',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: 'Preventive Maintenance',
+        description:
+          'Regular checkups and maintenance to prevent problems before they happen, keeping your business running smoothly.',
+        icon: 'tabler:tool',
+      },
+      {
+        title: 'Emergency Support Available',
+        description:
+          'When critical systems go down, we offer priority emergency support to get your business back up and running quickly.',
+        icon: 'tabler:urgent',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2026&q=80',
+      alt: 'Professional business support',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Reliable Business Partnership</h3>
+      Your business depends on technology. We make sure it works when you need it most.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Medical & Healthcare Practices',
+        description:
+          'HIPAA-compliant solutions, patient management systems, secure data handling, and technology that supports patient care.',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Legal & Professional Services',
+        description:
+          'Secure document management, client communication systems, case management software, and confidential data protection.',
+        icon: 'tabler:gavel',
+      },
+      {
+        title: 'Retail & Restaurants',
+        description:
+          'POS systems, inventory management, customer WiFi, online ordering systems, and payment processing solutions.',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Real Estate & Insurance',
+        description:
+          'CRM systems, digital document signing, virtual tour technology, and mobile solutions for agents in the field.',
+        icon: 'tabler:home-dollar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Industry-specific solutions',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Industry-Specific Experience</h3>
+      We understand the unique technology needs of different types of businesses in Tucson.
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Call for Business Consultation',
+        href: 'tel:520-314-7152',
+        icon: 'tabler:phone',
+      },
+      {
+        variant: 'secondary',
+        text: 'Email Us',
+        href: 'mailto:mobiletechllcaz@gmail.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Keep Your Business Technology Running Smoothly"
+    subtitle="Contact us for a free consultation about your business technology needs. We're here to help your Tucson business succeed."
+  />
+</Layout>
