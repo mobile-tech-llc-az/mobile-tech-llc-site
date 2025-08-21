@@ -10,52 +10,83 @@ This is the **Mobile-Tech, LLC** business website built with Astro 5.0 and Tailw
 
 - **Company**: Mobile-Tech, LLC (comma is legally required)
 - **Location**: Tucson, Arizona area
-- **Phone**: (520) 314-7152
+- **Phone**: 520-314-7152 (standardized format across all pages)
 - **Email**: mobiletechllcaz@gmail.com
-- **Services**: In-home tech support, computer repair, mobile device help, internet setup, TV/streaming installation
-- **Target Audience**: Elderly customers and boomers (but welcoming to all ages)
+- **Services**: Two-tier service model - Residential tech support AND Enterprise L3/4+ solutions
+- **Target Audience**: 
+  - **Residential**: Elderly customers and families (but welcoming to all ages)
+  - **Commercial**: Businesses requiring enterprise-grade infrastructure
 - **Logo**: Located at `src/assets/images/Mobile-Tech-LLC.png`
 
 ## Service Categories
 
-Based on the marketing document, Mobile-Tech LLC provides:
+Mobile-Tech LLC operates a **two-tier service model**:
 
-### Tech Support
+### RESIDENTIAL SERVICES (Consumer/Family Focus)
 - Computer speed issues, virus removal, hard drive cleanup
 - Password management and security (Bitwarden setup)
 - Email problems (Gmail, Yahoo, Outlook)
 - WiFi router and internet troubleshooting
 - Software training and general support
 - Cloud storage setup (Google Drive, Dropbox, OneDrive)
-
-### Hardware Services
 - RAM/SSD upgrades and computer replacement
 - System reimaging and deep cleaning
 - Printer setup (preferring laser printers)
 - PC to Mac migration assistance
-
-### Mobile & A/V
 - iPhone, iPad, Android setup and support
 - Apple TV integration
 - TV mounting, streaming service setup
 - Remote control programming
-- Security camera installation (Reolink)
+- Basic security camera installation (Reolink)
+- **Technology purchasing consultation**: Research and help customers choose new computers, TVs, A/V equipment, and streaming devices
+
+### COMMERCIAL SERVICES (Enterprise L3/4+ Solutions)
+- **Enterprise File Servers**: 100TB+ custom builds, 24/7/365 uptime (10+ years proven)
+- **Large-Scale Networking**: 8,000+ sqft installations, 10G infrastructure, Cat6a runs
+- **Security Camera Systems**: Enterprise surveillance with offsite recording
+- **Professional A/V**: Conference room design, projector/TV installations
+- **Virtualization & Self-Hosting**: Kubernetes, open source software deployment
+- **Business Process Automation**: IaC/GitOps, AI implementation, digital transformation
+- **Office Integration**: Active Directory/LDAP, O365/Google Workspace, email migration
+- **Disaster Recovery**: Enterprise backup solutions, comprehensive data protection
+- **Network Architecture**: Complete design, infrastructure planning, security implementation
+- **POS Systems**: Toast POS and other modern retail solutions
+- **Cloud Service Management**: Multi-cloud architecture, cost optimization
+
+## Website Navigation Structure
+
+### Main Menu
+- **Services** (NEW dropdown menu positioned first)
+  - **Residential**: `/services/residential` - Family/consumer tech support
+  - **Commercial**: `/services/commercial` - Enterprise L3/4+ solutions
+- **Homes**: Template showcase pages (legacy)
+- **Pages**: Standard pages (About, Contact, Pricing, etc.)
+- **Landing**: Marketing landing pages
+- **Blog**: Content management system
 
 ## Website Messaging Strategy
 
-### Key Value Propositions
+### RESIDENTIAL Messaging
 - **Mobile Service**: "We Come to You" - no need to transport equipment
 - **Patient Approach**: "No judgment, no confusing tech talk"
 - **Local Business**: Tucson community focus
 - **Honest Pricing**: Clear, upfront costs
 - **Same-day service** availability
+- **Technology Guidance**: "Help choosing new technology" - research and unbiased recommendations
+- **Language**: Simple, non-technical, reassuring ("You're Not Alone")
 
-### Target Audience Considerations
-- Use simple, non-technical language
-- Address common tech anxieties
-- Emphasize patience and understanding
-- Focus on real problems customers face
-- Include reassuring messaging like "You're Not Alone"
+### COMMERCIAL Messaging
+- **Enterprise Expertise**: L3/4+ solutions with proven track record
+- **Cost-Effective**: Example: $17.5k for 400TB server vs. higher competitor pricing
+- **Proven Reliability**: 10+ years of 24/7/365 uptime on critical systems
+- **Advanced Technology**: Kubernetes, virtualization, automation capabilities
+- **Real Project Examples**: Specific technical implementations and results
+
+### Additional Messaging Guidelines
+- **Technology Purchasing Consultation**: Position as trusted advisor vs. sales pressure from big box stores
+- **Unbiased Recommendations**: Emphasize research-based advice tailored to customer's actual needs and budget
+- **Value Proposition**: "We help you choose the right technology" not "we sell you technology"
+- **Target Common Pain Points**: "Overwhelmed by too many choices?" and "Not sure what you actually need?"
 
 ## Key Commands
 
