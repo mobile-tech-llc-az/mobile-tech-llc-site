@@ -12,6 +12,14 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        // Mobile-Tech LLC brand colors
+        'brand': {
+          'dark': '#1e1a2e',
+          'medium': '#2a2336', 
+          'light': '#342a48',
+          'text': '#d7ab87',
+          'accent': '#816bb1',
+        },
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],

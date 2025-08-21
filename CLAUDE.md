@@ -66,6 +66,41 @@ This is an AstroWind-based website built with Astro 5.0 and Tailwind CSS. It's a
 - CSS/JS/HTML compression via astro-compress
 - Automatic sitemap and RSS feed generation
 
+## Brand Colors & Theming
+
+This project has been customized for **Mobile-Tech LLC** brand colors. The brand palette includes:
+
+### Brand Color Palette
+- **Primary**: #816bb1 (Purple accent from logo)
+- **Secondary**: #d7ab87 (Warm tan from logo)
+- **Dark**: #1e1a2e (Main dark purple from logo)
+- **Medium**: #2a2336 (Medium purple shade)
+- **Light**: #342a48 (Light purple shade)
+
+### Color Implementation
+- **CSS Variables**: Brand colors defined in `src/components/CustomStyles.astro`
+- **Tailwind Classes**: Available as `brand-dark`, `brand-medium`, `brand-light`, `brand-text`, `brand-accent`
+- **Light Mode**: Uses dark purple text on white backgrounds for contrast
+- **Dark Mode**: Uses warm tan text on dark purple backgrounds
+
+### Important Color Guidelines
+- **Always use Tabler icons** instead of flat-color-icons for consistent brand coloring
+- **Icon styling**: Use `text-[#816bb1]` for explicit brand purple on icons
+- **Panel backgrounds**: Use `bg-white dark:bg-brand-medium` for card components
+- **Borders**: Use `border-brand-light/20` for subtle branded borders
+
+### Common Brand Color Patterns
+```astro
+<!-- Icon with brand color -->
+icon: 'w-12 h-12 mb-6 text-[#816bb1]'
+
+<!-- Panel with brand backgrounds -->
+panel: 'bg-white dark:bg-brand-medium border border-brand-light/20'
+
+<!-- Text with brand colors -->
+class="text-primary dark:text-secondary"
+```
+
 ## Development Notes
 
 - The blog system requires `prerender = true` for full compatibility
@@ -73,3 +108,4 @@ This is an AstroWind-based website built with Astro 5.0 and Tailwind CSS. It's a
 - SEO and Open Graph metadata managed through config.yaml
 - Custom integrations loaded from vendor/ directory
 - ESLint and Prettier configured for Astro-specific parsing
+- **Brand consistency**: Always check that new components use brand colors instead of default blues
