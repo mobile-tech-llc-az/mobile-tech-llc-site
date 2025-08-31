@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Mobile-Tech, LLC',
 };
 ---
 
@@ -15,61 +15,61 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Mobile-Tech, LLC"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/Mobile-Tech-LLC.png',
+      alt: 'Mobile-Tech LLC Logo',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Serving Tucson Since <br />
+      <span class="text-primary dark:text-secondary">2005</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      Mobile-Tech, LLC has been providing patient, honest technology support to Tucson families and businesses for nearly two decades. 
+      We solve all technology problems while teaching you the best practices for security and maintenance - because we'd rather 
+      empower you than create dependency.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Track Record"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Years Serving Tucson', amount: '20+' },
+      { title: 'Founded', amount: '2005' },
+      { title: 'Service Areas', amount: '2' },
+      { title: 'Core Values', amount: '3' },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Two-Tier Service Model"
+    subtitle="Mobile-Tech, LLC provides comprehensive technology support across two distinct service tiers, ensuring we meet the unique needs of both residential customers and enterprise clients."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Residential Services',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'Patient, friendly tech support for families and individuals. We come to you with same-day service, focusing on education and empowerment.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Interior Design',
+        title: 'Commercial Solutions', 
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Enterprise L3/4+ infrastructure solutions including 100TB+ file servers, large-scale networking, and business automation.',
+        icon: 'tabler:building',
       },
       {
-        title: 'Photography',
+        title: 'Technology Consultation',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Unbiased technology purchasing advice and research. We help you choose the right technology for your actual needs and budget.',
+        icon: 'tabler:bulb',
       },
     ]}
   />
@@ -81,68 +81,68 @@ const metadata = {
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Computer Repair & Upgrades',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Speed optimization, virus removal, RAM/SSD upgrades, and system reimaging - all without data loss.',
+        icon: 'tabler:device-desktop',
       },
       {
-        title: 'Blog',
+        title: 'Network Infrastructure',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          '8,000+ sqft installations, 10G infrastructure, enterprise WiFi, and 24/7/365 uptime solutions.',
+        icon: 'tabler:network',
       },
       {
-        title: 'Business',
+        title: 'Security & Training',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Password management setup, security best practices training, and ongoing education to keep you safe.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Branding',
+        title: 'Mobile Device Support',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'iPhone, iPad, Android setup and support, including Apple TV integration and streaming services.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Medical',
+        title: 'Enterprise Virtualization',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'Kubernetes deployment, business process automation, and cloud service management for enterprise clients.',
+        icon: 'tabler:cloud-computing',
       },
       {
-        title: 'Fashion Design',
+        title: 'Mac Advocacy',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'We recommend Macs for simplicity and reliability, helping customers transition from PC to Mac seamlessly.',
+        icon: 'tabler:brand-apple',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Technology Support Services',
     }}
   />
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our Core Values"
+    subtitle="Since 2005, Mobile-Tech, LLC has built its reputation on three fundamental principles that guide every interaction with our customers."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Education Over Dependency',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          "We'd rather lose a recurring customer by teaching them to maintain their own systems than create dependency. Our goal is to empower you with knowledge and best practices.",
       },
       {
-        title: 'Constant Improvement',
+        title: 'Simplicity and Repeatability',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'We prioritize simple, reliable solutions that work consistently over time. This is why we often recommend Macs - they provide the simplicity our customers value.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Honest, Patient Service',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'No judgment, no confusing tech talk. We provide clear explanations and take the time needed to ensure you understand your technology and feel confident using it.',
       },
     ]}
   />
@@ -150,30 +150,30 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Our Journey"
+    subtitle="From our founding in May 2005 to today, Mobile-Tech, LLC has consistently strived to provide excellent service while solving all technology problems - big and small."
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'Contact Us Today',
+      href: '/contact',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Nearly Two Decades of Service',
+        description: 'Since 2005, we\'ve been visiting Tucsonans in their homes and businesses, building lasting relationships through reliable service.',
+        icon: 'tabler:calendar-time',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Proven Enterprise Reliability',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Our enterprise clients trust us with critical infrastructure, including 10+ years of 24/7/365 uptime on custom-built file servers.',
+        icon: 'tabler:server',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Data Recovery Excellence',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'We rebuild computers and recover systems without data loss, combining technical expertise with the patience to do things right.',
+        icon: 'tabler:device-floppy',
       },
     ]}
   />
@@ -181,47 +181,39 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Our Service Area"
+    tagline="We Come to You"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'Tucson, Arizona',
+        description: 'Mobile service throughout the greater Tucson area - we bring our expertise directly to your location.',
       },
       {
-        title: 'Call us',
+        title: 'Mobile-First Service',
+        description: 'No need to transport your equipment. We come equipped with tools and expertise to solve problems on-site.',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Get In Touch"
+    tagline="Ready to Help"
+    columns={2}
+    items={[
+      {
+        title: 'Call Us Today',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Speak directly with our tech support team. Same-day service available for urgent issues. Phone: 520-314-7152',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Email Support',
+        description:
+          'Send us details about your technology challenge and we\'ll respond promptly with next steps. Email: mobiletechllcaz@gmail.com',
+        icon: 'tabler:mail',
       },
     ]}
   />
