@@ -57,13 +57,17 @@ Mobile-Tech LLC operates a **two-tier service model**:
 
 ## Website Navigation Structure
 
-### Main Menu
+### Current Main Menu (Updated)
 
-- **Services** (NEW dropdown menu positioned first)
-  - **Residential**: `/services/residential` - Family/consumer tech support
-  - **Commercial**: `/services/commercial` - Enterprise L3/4+ solutions
+- **Contact**: `/contact` - Primary contact page with online scheduling
+- **About Us**: `/about` - Company history and values  
+- **Residential**: `/services/residential` - Family/consumer tech support
+- **Commercial**: `/services/commercial` - Enterprise L3/4+ solutions
+
+### Commented Out (Available for Future Use)
+- **Services Dropdown**: Originally contained Residential/Commercial
 - **Homes**: Template showcase pages (legacy)
-- **Pages**: Standard pages (About, Contact, Pricing, etc.)
+- **Pages**: Standard pages (Pricing, etc.)
 - **Landing**: Marketing landing pages
 - **Blog**: Content management system
 
@@ -198,6 +202,82 @@ panel: 'bg-white dark:bg-brand-medium border border-brand-light/20'
 class="text-primary dark:text-secondary"
 ```
 
+## Recent Updates & Implementation Notes
+
+### Pages Completely Updated (August 2025)
+
+#### About Us Page (`/about`)
+- **Hero Section**: Updated with "Serving Tucson Since 2005" messaging and company logo
+- **Statistics**: Shows 20+ years, founding date (2005), service areas, core values
+- **Service Model**: Two-tier approach (Residential + Commercial) with detailed feature descriptions
+- **Company Values**: Education over dependency, simplicity/repeatability, honest service
+- **Company History**: Nearly two decades of service, enterprise reliability, data recovery excellence
+- **Contact Info**: Updated with correct Tucson area info, phone (520-314-7152), email
+
+#### Contact Page (`/contact`)
+- **Email Form**: Removed and replaced with online scheduling system
+- **Calendar Integration**: Google Calendar booking link: `https://calendar.app.google/7RcPw78n1ixTajYK6`
+- **Hero Section**: "Schedule Your On-Site Visit" with prominent call-to-action
+- **Contact Methods**: Phone (520-314-7152), email (mobiletechllcaz@gmail.com), mobile service area
+- **Service Descriptions**: Residential, commercial, and technology consultation options
+
+#### Terms of Service (`/terms`)
+- **LLC Liability Protection**: Clear disclaimers about no assumption of liabilities/damages
+- **No Warranties Clause**: Explicit statement - no implicit/explicit warranties provided
+- **Best Efforts Commitment**: Professional service standards while limiting liability
+- **Arizona Law**: Proper jurisdiction and dispute resolution
+- **Service-Specific**: Technology support focus (not website templates)
+
+#### Privacy Policy (`/privacy`)
+- **Service-Focused**: Covers on-site tech support and website interactions
+- **Client Data Protection**: Clear policies about device access during service
+- **Professional Discretion**: Privacy handling during support visits
+- **Data Retention**: 3-7 year business record retention policy
+- **Client Rights**: Clear information about data control and privacy options
+
+#### Home Page (`/index`)
+- **Button Updates**: Removed "Send Email", kept "Call for Help" and "Book a Visit"
+- **Book a Visit**: New button linking to `/contact` page with calendar icon
+- **RSS Feed**: Commented out from header (`showRssFeed` removed from PageLayout.astro)
+
+### Navigation Structure Updates (`/src/navigation.ts`)
+
+#### Header Navigation
+- **Streamlined Menu**: Contact, About Us, Residential, Commercial (flat structure)
+- **Commented Out**: Services dropdown, Homes, Pages, Landing, Blog sections
+- **Future Ready**: All unused navigation preserved as comments
+
+#### Footer Navigation
+- **Active Sections**: Services (Residential/Commercial), Company (About/Contact)
+- **Social Links**: Only Google business link active: `https://share.google/JDPDAvLEeRYEsJGKX`
+- **Secondary Links**: Terms and Privacy Policy maintained
+- **Commented Out**: Product, Platform, Support sections; X, Instagram, Facebook, RSS, GitHub
+
+### Visual & Branding Updates
+
+#### Favicon (`/src/assets/favicons/favicon.svg`)
+- **Updated Icon**: Changed from abstract logo to laptop icon (💻 representation)
+- **Professional Design**: Clean laptop with blue screen and dark gray body
+- **Tech Industry Appropriate**: Clearly represents computer/technology services
+
+#### Contact Information Standardization
+- **Phone**: 520-314-7152 (standardized format across all pages)
+- **Email**: mobiletechllcaz@gmail.com
+- **Service Area**: Tucson, Arizona and surrounding areas
+- **Business Model**: Mobile service - "We Come to You"
+
+### Online Scheduling Integration
+- **Primary CTA**: Book appointments through Google Calendar
+- **Calendar Link**: `https://calendar.app.google/7RcPw78n1ixTajYK6`
+- **Contact Page**: Prominent scheduling section with clear instructions
+- **Home Page**: Direct "Book a Visit" button for immediate scheduling
+
+### Legal Compliance Updates
+- **LLC Protection**: Proper liability disclaimers for service business
+- **No Warranties**: Clear service limitations while maintaining quality commitment
+- **Arizona Jurisdiction**: Proper legal framework for local business
+- **Privacy Compliance**: Service-appropriate data handling policies
+
 ## Development Notes
 
 - The blog system requires `prerender = true` for full compatibility
@@ -206,3 +286,5 @@ class="text-primary dark:text-secondary"
 - Custom integrations loaded from vendor/ directory
 - ESLint and Prettier configured for Astro-specific parsing
 - **Brand consistency**: Always check that new components use brand colors instead of default blues
+- **RSS Feed**: Currently commented out in PageLayout.astro (can be re-enabled)
+- **Navigation**: Extensive commented sections available for future feature additions
