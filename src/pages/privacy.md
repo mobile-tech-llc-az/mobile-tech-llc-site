@@ -68,6 +68,7 @@ Mobile-Tech, LLC does not sell, rent, or trade your personal information. We may
 ### Legal Requirements
 
 We may disclose information when required by law, such as:
+
 - Responding to court orders or legal proceedings
 - Complying with regulatory requirements
 - Protecting the rights and safety of our business and clients
@@ -88,6 +89,7 @@ We take reasonable measures to protect your information:
 ### Access to Your Devices
 
 During technology support services:
+
 - We access client systems only as necessary to provide requested services
 - We respect your privacy and handle all data with professional discretion
 - We recommend backing up important data before service
@@ -96,6 +98,7 @@ During technology support services:
 ### Data Recovery and Transfer
 
 When providing data recovery or system migration services:
+
 - We focus only on recovering or transferring the specific data requested
 - We use professional tools and methods to protect data integrity
 - We do not retain copies of your personal data after service completion
@@ -106,6 +109,7 @@ When providing data recovery or system migration services:
 ### Information Control
 
 You have the right to:
+
 - Request information about what personal data we have collected
 - Request corrections to any inaccurate information
 - Request deletion of your information (subject to business record requirements)
@@ -114,6 +118,7 @@ You have the right to:
 ### Service Records
 
 We maintain basic service records for business purposes, including:
+
 - Date and type of services provided
 - Basic contact information
 - Payment records
@@ -124,6 +129,7 @@ We maintain basic service records for business purposes, including:
 ### Essential Cookies
 
 We use cookies that are necessary for:
+
 - Online appointment scheduling functionality
 - Maintaining your session during website visits
 - Remembering your language and accessibility preferences
@@ -131,6 +137,7 @@ We use cookies that are necessary for:
 ### Analytics
 
 We may use analytics tools to understand:
+
 - Which pages are most helpful to visitors
 - How people find our website
 - General usage patterns to improve our services
@@ -152,6 +159,7 @@ We may update this Privacy Policy periodically to reflect changes in our practic
 ## Data Retention
 
 We retain client information only as long as necessary for:
+
 - Providing ongoing support and service
 - Meeting legal and business record requirements
 - Resolving any service-related issues or disputes
@@ -163,6 +171,7 @@ Service records are typically maintained for 3-7 years for business and tax purp
 If you have questions about this Privacy Policy or how we handle your information:
 
 **Mobile-Tech, LLC**
+
 - **Phone**: 520-314-7152
 - **Email**: mobiletechllcaz@gmail.com
 - **Service Area**: Tucson, Arizona and surrounding areas

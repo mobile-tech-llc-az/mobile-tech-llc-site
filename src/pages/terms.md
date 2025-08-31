@@ -23,6 +23,7 @@ By engaging Mobile-Tech, LLC for technology support services or using our websit
 ### Service Provision
 
 Mobile-Tech, LLC provides professional technology support services including but not limited to:
+
 - Computer repair and maintenance
 - Network setup and troubleshooting
 - Device configuration and training
@@ -62,6 +63,7 @@ Mobile-Tech, LLC provides professional technology support services including but
 ### Best Efforts Commitment
 
 While we disclaim warranties, Mobile-Tech, LLC commits to:
+
 - Providing professional, competent service to the best of our abilities
 - Using industry-standard practices and procedures
 - Taking reasonable care when handling client equipment and data
@@ -91,6 +93,7 @@ While we disclaim warranties, Mobile-Tech, LLC commits to:
 ## Dispute Resolution
 
 In the event of any disputes:
+
 1. Clients agree to first attempt resolution through direct communication with Mobile-Tech, LLC
 2. We will work in good faith to address any concerns or issues
 3. Arizona law governs these terms and any disputes
@@ -98,6 +101,7 @@ In the event of any disputes:
 ## Service Standards
 
 Mobile-Tech, LLC strives to provide:
+
 - Patient, professional service without judgment or confusing technical jargon
 - Educational support to help clients understand and maintain their technology
 - Honest assessment of technology needs and solutions
@@ -112,6 +116,7 @@ Mobile-Tech, LLC reserves the right to modify these terms at any time. Updated t
 For questions about these Terms of Service or our services:
 
 **Mobile-Tech, LLC**
+
 - **Phone**: 520-314-7152
 - **Email**: mobiletechllcaz@gmail.com
 - **Service Area**: Tucson, Arizona and surrounding areas
