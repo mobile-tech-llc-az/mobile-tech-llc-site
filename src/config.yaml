@@ -11,7 +11,7 @@ metadata:
   title:
     default: Mobile-Tech, LLC
     template: '%s — Mobile-Tech, LLC'
-  description: 'U+1F4BB Mobile-Tech has been Tucson’s trusted IT support since 2005. We help homes and businesses with computers, Wi-Fi, servers, and more, delivering fast, local, and reliable service you can count on.'
+  description: 'Mobile-Tech has been Tucson’s trusted IT support since 2005. We help homes and businesses with computers, Wi-Fi, servers, and more, delivering fast, local, and reliable service you can count on.'
   robots:
     index: true
     follow: true
