@@ -17,6 +17,8 @@ By engaging Mobile-Tech, LLC for technology support services or using our websit
 - **Services** refers to all technology support, consultation, repair, and related services provided by Mobile-Tech, LLC
 - **Client** or **You** refers to the individual or entity requesting and paying for services
 - **On-Site Visit** refers to mobile technology support provided at the client's location
+- **Drop-off** refers to client bringing a device to Mobile-Tech, LLC for repair
+- **Remote Support** refers to remote technology support provided over the internet and phone
 
 ## Service Terms
 
@@ -29,20 +31,20 @@ Mobile-Tech, LLC provides professional technology support services including but
 - Device configuration and training
 - Technology consultation and purchasing advice
 - Enterprise infrastructure solutions
+- Travel distance beyond 45 minutes each direction will incur additional charges (Typically 50% of the hourly rate) and will require a two hour charge minimium
 
 ### Payment Terms
 
 - Payment is due upon completion of services unless other arrangements have been agreed upon in writing
 - Clients agree to pay all fees for services rendered
 - Payment methods accepted include cash, check, and electronic payment
-- A service call fee may apply for on-site visits, which will be disclosed prior to scheduling
 
 ### Client Responsibilities
 
 - Provide accurate information about technology issues and requirements
 - Ensure safe and reasonable access to equipment and work areas
 - Back up important data before service (when possible and recommended)
-- Pay agreed-upon fees in a timely manner
+- Pay agreed-upon invoices in a timely manner
 
 ## Limitation of Liability
 
@@ -83,6 +85,7 @@ While we disclaim warranties, Mobile-Tech, LLC commits to:
 - Services are limited to those specifically requested and agreed upon
 - Additional work beyond the original scope may require separate authorization and payment
 - We reserve the right to decline services that are beyond our expertise or capabilities
+- Additions or changes to the agreed-upon scope may incur additional charges and time to complete
 
 ### Equipment and Third-Party Issues
 
@@ -96,7 +99,7 @@ In the event of any disputes:
 
 1. Clients agree to first attempt resolution through direct communication with Mobile-Tech, LLC
 2. We will work in good faith to address any concerns or issues
-3. Arizona law governs these terms and any disputes
+3. We strive to resolve and issues or any disputes quickly and with integrity
 
 ## Service Standards
 
@@ -106,6 +109,8 @@ Mobile-Tech, LLC strives to provide:
 - Educational support to help clients understand and maintain their technology
 - Honest assessment of technology needs and solutions
 - Same-day service when possible for urgent issues
+- All of the above is subject to team member availability and staffing
+- We value time and care for our clients and employees
 
 ## Modifications to Terms
 

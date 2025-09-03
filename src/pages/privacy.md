@@ -13,7 +13,7 @@ This Privacy Policy describes how Mobile-Tech, LLC collects, uses, and protects 
 
 When providing technology support services, we may collect:
 
-- **Contact Information**: Name, phone number, email address, and service location
+- **Contact Information**: Name, phone number, email address, service location, and other sensitive information
 - **Technical Information**: Details about your devices, systems, and technology issues
 - **Service Records**: Documentation of services provided and recommendations made
 
@@ -30,6 +30,8 @@ When you visit our website or use our online scheduling system:
 - Service requests and technical descriptions
 - Feedback and communications with our team
 - Appointment scheduling information
+- Reviews and ratings are strongly encouraged
+- Referral information that may include a discount on subsequent services
 
 ## How We Use Your Information
 
@@ -40,7 +42,7 @@ Mobile-Tech, LLC uses collected information to:
 - Schedule and provide on-site technology support
 - Understand and resolve technical issues
 - Follow up on service quality and satisfaction
-- Maintain service records for future reference
+- Maintain records for future reference
 
 ### Business Operations
 
@@ -72,6 +74,7 @@ We may disclose information when required by law, such as:
 - Responding to court orders or legal proceedings
 - Complying with regulatory requirements
 - Protecting the rights and safety of our business and clients
+- Any illegal or unethical activity will be reported to the authorities
 
 ## Data Security
 
@@ -93,15 +96,13 @@ During technology support services:
 - We access client systems only as necessary to provide requested services
 - We respect your privacy and handle all data with professional discretion
 - We recommend backing up important data before service
-- We do not intentionally view, copy, or retain personal files or information
 
 ### Data Recovery and Transfer
 
 When providing data recovery or system migration services:
 
-- We focus only on recovering or transferring the specific data requested
-- We use professional tools and methods to protect data integrity
-- We do not retain copies of your personal data after service completion
+- We focus only on recovering or transferring the specific data requested to the best of our ability
+- We use professional, open source, freemium and freeware tools and methods to protect data integrity
 - We recommend secure practices for ongoing data protection
 
 ## Your Privacy Rights
@@ -110,9 +111,7 @@ When providing data recovery or system migration services:
 
 You have the right to:
 
-- Request information about what personal data we have collected
 - Request corrections to any inaccurate information
-- Request deletion of your information (subject to business record requirements)
 - Opt out of non-essential communications
 
 ### Service Records
@@ -122,7 +121,7 @@ We maintain basic service records for business purposes, including:
 - Date and type of services provided
 - Basic contact information
 - Payment records
-- General technical notes (without personal data details)
+- General technical notes
 
 ## Website Cookies and Analytics
 
@@ -154,7 +153,7 @@ Mobile-Tech, LLC services are intended for adults. We do not knowingly collect p
 
 ## Changes to This Privacy Policy
 
-We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will post updated versions on our website with the revision date. Significant changes will be communicated to clients through our normal communication channels.
+We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will post updated versions on our website with the revision date.
 
 ## Data Retention
 
