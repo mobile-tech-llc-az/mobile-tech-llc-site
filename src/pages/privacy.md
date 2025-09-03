@@ -3,7 +3,7 @@ title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: August 31, 2025
+_Last updated_: September 3, 2025
 
 This Privacy Policy describes how Mobile-Tech, LLC collects, uses, and protects your information when you use our technology support services or visit our website.
 
