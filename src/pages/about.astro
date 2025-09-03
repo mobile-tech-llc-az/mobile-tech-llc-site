@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About Mobile-Tech, LLC',
@@ -31,7 +32,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       Mobile-Tech, LLC has been providing patient, honest technology support to Tucson families and businesses for
-      nearly two decades. We solve all technology problems while teaching you the best practices for security and
+      over two decades. We solve all technology problems while teaching you the best practices for security and
       maintenance - because we'd rather empower you than create dependency.
     </Fragment>
   </Hero>
@@ -43,8 +44,8 @@ const metadata = {
     stats={[
       { title: 'Years Serving Tucson', amount: '20+' },
       { title: 'Founded', amount: '2005' },
-      { title: 'Service Areas', amount: '2' },
-      { title: 'Core Values', amount: '3' },
+      { title: 'Service Models', amount: '2' },
+      { title: 'Families and Businesses Served', amount: '100+' },
     ]}
   />
 
@@ -52,20 +53,20 @@ const metadata = {
 
   <Features3
     title="Our Two-Tier Service Model"
-    subtitle="Mobile-Tech, LLC provides comprehensive technology support across two distinct service tiers, ensuring we meet the unique needs of both residential customers and enterprise clients."
+    subtitle="Mobile-Tech, LLC provides comprehensive technology support across two distinct service tiers, ensuring we meet the unique needs of residential customers, small businesses, and enterprise clients."
     columns={3}
     isBeforeContent={true}
     items={[
       {
         title: 'Residential Services',
         description:
-          'Patient, friendly tech support for families and individuals. We come to you with same-day service, focusing on education and empowerment.',
+          'Patient, friendly tech support for families and individuals. We offer in-person service, drop-off or remote help. We pride ourselves on education and empowerment.',
         icon: 'tabler:home',
       },
       {
         title: 'Commercial Solutions',
         description:
-          'Enterprise L3/4+ infrastructure solutions including 100TB+ file servers, large-scale networking, and business automation.',
+          'Enterprise infrastructure solutions including: servers, large-scale networking, office support, business automation, and services at any scale.',
         icon: 'tabler:building',
       },
       {
@@ -102,13 +103,13 @@ const metadata = {
       },
       {
         title: 'Mobile Device Support',
-        description: 'iPhone, iPad, Android setup and support, including Apple TV integration and streaming services.',
+        description: 'iPhone, iPad, Android setup and support, including cross-platform integration.',
         icon: 'tabler:device-mobile',
       },
       {
         title: 'Enterprise Virtualization',
         description:
-          'Kubernetes deployment, business process automation, and cloud service management for enterprise clients.',
+          'Server deployment, business process automation, and cloud service management for enterprise clients.',
         icon: 'tabler:cloud-computing',
       },
       {
@@ -160,7 +161,7 @@ const metadata = {
     }}
     items={[
       {
-        title: 'Nearly Two Decades of Service',
+        title: 'More Than Two Decades of Service',
         description:
           "Since 2005, we've been visiting Tucsonans in their homes and businesses, building lasting relationships through reliable service.",
         icon: 'tabler:calendar-time',
@@ -168,7 +169,7 @@ const metadata = {
       {
         title: 'Proven Enterprise Reliability',
         description:
-          'Our enterprise clients trust us with critical infrastructure, including 10+ years of 24/7/365 uptime on custom-built file servers.',
+          'Our enterprise clients trust us with critical infrastructure, including 15+ years of 24/7/365 uptime on custom-built servers.',
         icon: 'tabler:server',
       },
       {
@@ -185,7 +186,7 @@ const metadata = {
   <Features2
     title="Our Service Area"
     tagline="We Come to You"
-    columns={2}
+    columns={3}
     items={[
       {
         title: 'Tucson, Arizona',
@@ -197,12 +198,17 @@ const metadata = {
         description:
           'No need to transport your equipment. We come equipped with tools and expertise to solve problems on-site.',
       },
+      {
+        title: 'Remote support or drop-off',
+        description:
+          'We also offer remote support and drop-off services, so you can get back online quickly.',
+      }
     ]}
   />
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
+  <!-- <Features2
     title="Get In Touch"
     tagline="Ready to Help"
     columns={2}
@@ -220,5 +226,26 @@ const metadata = {
         icon: 'tabler:mail',
       },
     ]}
-  />
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact us',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Schedule your visit today
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <strong>We're Ready to Help</strong>
+    </Fragment>
+  </CallToAction>
 </Layout>
