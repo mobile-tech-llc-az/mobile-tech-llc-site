@@ -82,7 +82,7 @@ const metadata = {
       {
         title: 'Email & Password Issues',
         description:
-          "Gmail, Yahoo, Outlook problems. Forgotten passwords, can't log in, or need help organizing your email.",
+          "Gmail, Yahoo, Outlook problems. Forgotten passwords, can't log in, or setting up a password manager.",
         icon: 'tabler:mail',
       },
       {
@@ -94,7 +94,7 @@ const metadata = {
       {
         title: 'Backing Up Your Photos & Files',
         description:
-          "Don't lose your precious photos! We help save your files to the cloud and show you how to keep them safe.",
+          "Don't lose your precious photos! We help save your files to the cloud or local storage and show you how to keep them safe.",
         icon: 'tabler:photo',
       },
       {
@@ -103,6 +103,12 @@ const metadata = {
           "Need a new computer, TV, or streaming device? We research the best options and help you choose what's right for your needs and budget.",
         icon: 'tabler:shopping-cart',
       },
+      {
+        title: 'Printer Setup & Troubleshooting',
+        description:
+          'Setting up new printers, fixing printing problems, and helping you print from your phone or tablet. We prefer reliable laser printers that just work.',
+        icon: 'tabler:printer',
+      },
     ]}
   />
 
@@ -110,7 +116,7 @@ const metadata = {
 
   <Content
     isReversed
-    title="Why Choose Mobile-Tech LLC?"
+    title="Why Choose Us?"
     items={[
       {
         title: 'We Come to You',
@@ -123,7 +129,7 @@ const metadata = {
       },
       {
         title: 'Honest Pricing',
-        description: 'Clear, upfront pricing with no hidden fees. We only recommend what you actually need.',
+        description: 'Clear, upfront hourly pricing with no hidden fees. We only recommend what you actually need. We work quickly to solve your problems.',
       },
       {
         title: 'Local Tucson Business',
@@ -153,7 +159,7 @@ const metadata = {
     items={[
       {
         title: '"My computer is full and running slow"',
-        description: 'We clean up your computer, move photos to the cloud, and make it run like new again.',
+        description: 'We clean up your computer, backup photos to the cloud, and make it run like new again. If it\'s old, we\'ll upgrade it.',
       },
       {
         title: '"I keep getting scary pop-up messages"',
@@ -162,7 +168,7 @@ const metadata = {
       {
         title: '"I forgot all my passwords"',
         description:
-          'We help you reset passwords and set up a simple password manager so you never get locked out again.',
+          'We help you reset passwords and set up a simple password manager so you only need to remember one master password.',
       },
       {
         title: '"My WiFi doesn\'t reach my bedroom"',
@@ -176,7 +182,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">You're Not Alone</h3>
-      These problems happen to everyone! We've helped thousands of Tucson residents with these exact same issues.
+      These problems happen to everyone! We've helped hundreds of Tucson families with an array of technology issues.
     </Fragment>
 
     <Fragment slot="bg">
@@ -190,9 +196,9 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Call Now: 520-314-7152',
-        href: 'tel:520-314-7152',
-        icon: 'tabler:phone',
+        text: 'Contact Us Today',
+        href: '/contact',
+        icon: 'tabler:calendar',
       },
     ]}
   >
@@ -201,9 +207,6 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Call us at <strong>520-314-7152</strong> or email <strong>mobiletechllcaz@gmail.com</strong><br
-        class="hidden md:inline"
-      />
       <strong>Same-day service available!</strong>
     </Fragment>
   </CallToAction>
