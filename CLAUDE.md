@@ -99,6 +99,10 @@ Mobile-Tech LLC operates a **two-tier service model**:
 - **Value Proposition**: "We help you choose the right technology" not "we sell you technology"
 - **Target Common Pain Points**: "Overwhelmed by too many choices?" and "Not sure what you actually need?"
 
+### Punctuation Style
+
+- **No em-dashes**: Never use em-dashes (—) anywhere in site content (page copy, titles, config metadata, blog posts). Use a comma or a hyphen (-) instead, whichever reads more naturally for the sentence.
+
 ## Key Commands
 
 | Command                  | Purpose                                    |
