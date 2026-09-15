@@ -18,7 +18,7 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Tablets', essentials: '1', complete: '1', concierge: '2' },
   { label: 'Printers & scanners', essentials: '-', complete: '✓', concierge: '✓' },
   { label: 'TV / streaming locations', essentials: '-', complete: 'Up to 3', concierge: 'Up to 6' },
-  { label: 'Wi-Fi & home network support', essentials: 'Enrolled device only', complete: '✓', concierge: '✓' },
+  { label: 'Wi-Fi & home network support', essentials: 'Enrolled devices only', complete: '✓', concierge: '✓' },
   { label: 'Audio / video systems', essentials: '-', complete: '1 standard system', concierge: 'Larger / multi-zone' },
   { label: 'Smart-home & IoT devices', essentials: '-', complete: '✓', concierge: '✓' },
   { label: 'Antivirus & security tools', essentials: '✓', complete: '✓', concierge: '✓' },
@@ -27,6 +27,12 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Purchase guidance before you buy', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
+  {
+    label: 'Includes everything in previous tier(s)',
+    essentials: '-',
+    complete: '✓ Home Essentials',
+    concierge: '✓ Home Essentials + Complete',
+  },
   { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
 ];
 ---
@@ -52,12 +58,12 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
         price: 79,
         period: 'per month',
         items: [
-          { description: '1 managed computer + 1 phone + 1 tablet' },
+          { description: '1 managed computer, 1 phone, 1 tablet' },
           { description: '30 minutes of included help each month' },
           { description: 'Proactive monitoring & security tools' },
           { description: 'Knowledge & training library access' },
           { description: 'Purchase guidance before you buy' },
-          { description: '$199 Setup & Home Tech Survey' },
+          { description: '$199 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -67,16 +73,17 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
       },
       {
         title: 'Home Complete',
-        subtitle: '“Help me manage it.” Our flagship plan.',
+        subtitle: '“Help me manage it.”',
         price: 149,
         period: 'per month',
         items: [
           { description: 'Up to 3 computers, 2 phones, 1 tablet' },
           { description: 'Printers, Wi-Fi & home network support' },
-          { description: 'Smart-home support + 1 standard A/V system' },
+          { description: 'Smart-home support, 1 standard Audio/Video system' },
           { description: '1 hour of included help each month' },
           { description: 'Priority scheduling' },
-          { description: '$299 Setup & Home Tech Survey' },
+          { description: 'Includes everything in Essentials' },
+          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -88,16 +95,17 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
       },
       {
         title: 'Home Concierge',
-        subtitle: '“Handle it for me.” White-glove coverage.',
+        subtitle: '“Handle it for me.”',
         price: '229+',
         period: 'per month',
         items: [
           { description: 'Up to 5 computers, 4 phones, 2 tablets' },
-          { description: 'Up to 6 TV/streaming locations, multi-zone A/V' },
+          { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
           { description: '2 hours of included help each month' },
           { description: 'Highest scheduling priority' },
           { description: 'Additional devices +$15/mo each' },
-          { description: '$299 Setup & Home Tech Survey' },
+          { description: 'Includes everything in Essentials + Complete' },
+          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -185,7 +193,7 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
       {
         title: 'What is the Setup & Home Tech Survey?',
         description:
-          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. ISP-partner customers receive $50 off the setup fee.",
+          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This fee also covers your first month of membership. ISP-partner customers receive $50 off the setup fee.",
       },
       {
         title: 'Is there a minimum commitment?',
