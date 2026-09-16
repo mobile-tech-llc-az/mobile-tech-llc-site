@@ -5,7 +5,7 @@ layout: '~/layouts/MarkdownLayout.astro'
 
 _Last updated_: September 3, 2025
 
-Please read these Terms of Service carefully before using our services or website.
+Please read these Terms of Service carefully before using our services or website. Looking for the human side of what membership means, not just the legal terms? See our [Membership Values](/membership-values) page.
 
 ## Agreement to Terms
 

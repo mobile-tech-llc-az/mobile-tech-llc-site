@@ -205,6 +205,7 @@ export const footerData = {
     // },
   ],
   secondaryLinks: [
+    { text: 'Membership Values', href: getPermalink('/membership-values') },
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
