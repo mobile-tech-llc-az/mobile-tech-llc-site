@@ -3,34 +3,34 @@ title: 'Membership Values'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: September 15, 2026
+_Last updated_: September 16, 2026
 
 This page is the human side of membership. It's not a legal document, that's what our [Terms of Service](/terms) are for. This is us telling you plainly what membership means, what you can expect from us, and what we ask of you in return.
 
 ## What Membership Really Means
 
-A Mobile-Tech membership isn't an hour bank, and it isn't a repair ticket. It's an ongoing relationship with a local team that gets to know your home.
+A Mobile-Tech membership isn't an hour bank, and it isn't a repair ticket. It's an ongoing relationship with a local team that gets to know your home. Here's what we strive for:
 
-- We keep your household technology running.
-- We watch for problems before they become emergencies.
-- We document your setup, so you never start over with a stranger.
+- We work to keep your household technology running smoothly.
+- We watch for problems, aiming to catch them before they become emergencies.
+- We document your setup, so you don't have to start over with a stranger.
 - We advise you honestly when you're deciding what to buy.
-- We're here when something breaks.
+- We're here to help when something breaks.
 
 That's what you're really paying for: continuity, trust, and a team that already knows your home.
 
 ## What You Can Expect From Us
 
-We will:
+We strive to:
 
 - Treat you, your home, your information, and your time with respect.
 - Explain what we're doing and why, in plain language, no confusing tech talk.
-- Be honest about mistakes, and work to fix them.
+- Be honest about mistakes, and make things right within the terms of your service agreement.
 - Recommend technology based on what's actually right for you, not what earns us the biggest invoice.
 - Teach you when you want to learn, and take more off your plate when you'd rather not think about it.
 - Tell you clearly when something falls outside your membership, or should be a separate project, before we start.
 - Protect your privacy, and only access what we need to help you.
-- Avoid locking you in. When it's practical, you own and control the technology you buy.
+- Avoid locking you in. You own and control the technology you buy.
 - Stay professional while remaining approachable, patient, and human.
 
 ## What We Ask of You
@@ -38,7 +38,7 @@ We will:
 In return, we ask you to:
 
 - Treat our team with the same courtesy and respect we bring to you.
-- Be honest and reasonably complete with us when something's wrong. We can't fix what we don't know about.
+- Be honest and communicate with us when something's wrong. We can't fix what we don't know about.
 - Keep the tools we use to support you installed and working, where your devices allow it.
 - Give us reasonable access to your systems when you need our help.
 - Respect our appointment times, project boundaries, and the billing terms we agree to.
@@ -66,7 +66,7 @@ This isn't about punishment on either side. It's about protecting a relationship
 
 ## The Legal Version
 
-This page describes the spirit of membership. The binding details, like liability, payment terms, and service scope, live in our [Terms of Service](/terms).
+This page describes the spirit of membership. The binding details, like liability, payment terms, and service scope, live in our [Terms of Service](/terms). If anything on this page ever conflicts with our Terms of Service, the Terms of Service control.
 
 ---
 
