@@ -1,6 +1,6 @@
 site:
   name: Mobile-Tech, LLC
-  site: 'https://www.mobile-tech-llc.com/'
+  site: 'https://mobile-tech-llc.com/'
   base: '/'
   trailingSlash: false
 
