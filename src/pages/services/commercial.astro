@@ -6,11 +6,31 @@ import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'Enterprise IT Solutions — Mobile-Tech, LLC',
+  title: 'Enterprise IT Solutions - Mobile-Tech, LLC',
+  description:
+    'Enterprise IT infrastructure for Tucson businesses: file servers, large-scale networking, security camera systems, virtualization, and business automation from Mobile-Tech, LLC.',
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Enterprise IT Infrastructure',
+  name: 'Mobile-Tech Commercial Solutions',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Mobile-Tech, LLC',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Tucson, Arizona',
+  },
+  description:
+    'Enterprise-grade file servers, large-scale networking, security camera systems, virtualization, and business process automation for Tucson-area businesses.',
 };
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <!-- Hero Widget ******************* -->
 
   <Hero

@@ -2,27 +2,50 @@
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = {
-  title: 'Residential Tech Support Services — Mobile-Tech, LLC',
+  title: 'Residential Tech Support Services - Mobile-Tech, LLC',
+  description:
+    'Ongoing personal IT department membership plans and one-time computer help for Tucson-area homes. Mobile-Tech gets to know your home and is there when something breaks.',
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Residential Technology Support',
+  name: 'Mobile-Tech Residential Services',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Mobile-Tech, LLC',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Tucson, Arizona',
+  },
+  description:
+    'Ongoing personal IT department membership plans and one-time technology help for Tucson-area homes, including computer repair, network support, smart-home setup, and technology purchasing guidance.',
 };
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Residential Services"
+    tagline="Your Personal IT Department"
     title="Home Technology Support in Tucson"
-    subtitle="We help families and individuals with all their home technology needs. From slow computers to WiFi problems, we make technology simple and stress-free."
+    subtitle="We help families and individuals with all their home technology needs.  Our ongoing membership gets to know you and your home, watches over it proactively, and is there when something goes wrong. Prefer one-time help instead? We do that too."
     actions={[
       {
         variant: 'primary',
-        text: 'Call for Help',
-        href: 'tel:520-314-7152',
-        icon: 'tabler:phone',
+        text: 'See Membership Plans',
+        href: '/pricing',
+        icon: 'tabler:list-check',
       },
       {
         variant: 'primary',
@@ -37,11 +60,43 @@ const metadata = {
     }}
   />
 
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Now Offering: Personal IT Department Memberships"
+    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
+    columns={3}
+    items={[
+      {
+        title: 'Home Essentials - $79/mo',
+        description:
+          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Home Complete - $149/mo',
+        description:
+          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details along side you.',
+        icon: 'tabler:home-cog',
+      },
+      {
+        title: 'Home Concierge - $229+/mo',
+        description:
+          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
+        icon: 'tabler:crown',
+      },
+    ]}
+  />
+
+  <div class="text-center -mt-8 mb-16">
+    <Button variant="primary" href="/pricing" text="Compare All Plans & Pricing" icon="tabler:arrow-right" />
+  </div>
+
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Complete Home Tech Support"
-    subtitle="These are the most common issues we solve for homeowners every day."
+    title="What's Offered in Your Membership"
+    subtitle="These are the everyday tech needs your membership covers, plus a non-member hourly rate if you'd rather pay as you go."
     columns={2}
     items={[
       {
@@ -71,7 +126,7 @@ const metadata = {
       {
         title: 'TV & Streaming Setup',
         description:
-          'Setting up Netflix, Hulu, Disney+, mounting TVs, programming remote controls, and switching from cable to streaming services like Roku or Apple TV.',
+          'Setting up Netflix, Hulu, Disney+, mounting TVs, programming remote controls, and switching from cable to streaming services and setup of Roku or Apple TV.',
         icon: 'tabler:device-tv',
       },
       {
@@ -149,10 +204,10 @@ const metadata = {
         icon: 'tabler:heart',
       },
       {
-        title: 'Honest, Upfront Pricing',
+        title: 'One Team, No Starting Over',
         description:
-          'Clear pricing with no hidden fees or surprises. We only recommend what you actually need - no overselling or pressure tactics.',
-        icon: 'tabler:receipt',
+          "With a membership, you're not explaining your setup to a new person every time something breaks. We already know your home, your accounts, and your history.",
+        icon: 'tabler:users',
       },
       {
         title: 'Same-Day Service Available',
@@ -168,8 +223,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Tucson Families Choose Us</h3>
-      We understand that every home has different technology needs. That's why we take the time to understand your specific
-      situation.
+      We understand that every home has different technology needs. That's why we built a membership that acts like a personal
+      IT department for your family, one team that already knows your setup. Each membership is tailored to your household
+      tech needs.
     </Fragment>
   </Content>
 
@@ -220,9 +276,9 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Call Now: 520-314-7152',
-        href: 'tel:520-314-7152',
-        icon: 'tabler:phone',
+        text: 'See Membership Plans',
+        href: '/pricing',
+        icon: 'tabler:list-check',
       },
       {
         variant: 'primary',
@@ -231,7 +287,7 @@ const metadata = {
         icon: 'tabler:calendar',
       },
     ]}
-    title="Ready to Get Your Home Technology Working?"
-    subtitle="Call us today for friendly, patient tech support at your home. Same-day service available!"
+    title="Ready for a Personal IT Department of Your Own?"
+    subtitle="See our membership plans, or book a one-time visit. Either way, we're here to help. Same-day service is often available."
   />
 </Layout>

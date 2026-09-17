@@ -1,24 +1,27 @@
 ---
 title: 'Terms of Service'
+description: "Terms of Service for Mobile-Tech, LLC's technology support services and residential Membership Plans in Tucson, Arizona."
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: September 3, 2025
+_Last updated_: September 16, 2026
 
-Please read these Terms of Service carefully before using our services or website.
+Please read these Terms of Service carefully before using our services or website. Looking for the human side of what membership means, not just the legal terms? See our [Membership Values](/membership-values) page.
 
 ## Agreement to Terms
 
-By engaging Mobile-Tech, LLC for technology support services or using our website, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not use our services.
+By engaging Mobile-Tech, LLC for technology support services or using our website, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not use our services. If anything on another Mobile-Tech, LLC page, including our Membership Values page, ever conflicts with these Terms of Service, these Terms of Service control.
 
 ## Service Definitions
 
 - **Company** refers to Mobile-Tech, LLC, a Limited Liability Company operating in Tucson, Arizona
-- **Services** refers to all technology support, consultation, repair, and related services provided by Mobile-Tech, LLC
+- **Services** refers to all technology support, consultation, repair, and related services provided by Mobile-Tech, LLC, including Membership Plans
 - **Client** or **You** refers to the individual or entity requesting and paying for services
 - **On-Site Visit** refers to mobile technology support provided at the client's location
 - **Drop-off** refers to client bringing a device to Mobile-Tech, LLC for repair
 - **Remote Support** refers to remote technology support provided over the internet and phone
+- **Membership** or **Membership Plan** refers to Mobile-Tech, LLC's recurring, subscription-based residential service (Home Essentials, Home Complete, or Home Concierge), providing ongoing technology support, monitoring, and advisory services for a recurring monthly fee, as described on our Pricing page
+- **Member** refers to a Client enrolled in a Membership Plan
 
 ## Service Terms
 
@@ -45,6 +48,18 @@ Mobile-Tech, LLC provides professional technology support services including but
 - Ensure safe and reasonable access to equipment and work areas
 - Back up important data before service (when possible and recommended)
 - Pay agreed-upon invoices in a timely manner
+
+### Membership Plans
+
+In addition to one-time services, Mobile-Tech, LLC offers recurring Membership Plans for residential clients, as described on our Pricing page.
+
+- **Initial Term & Renewal**: New Memberships begin with an initial three (3) month term. After the initial term, the Membership automatically continues on a month-to-month basis until cancelled.
+- **Recurring Billing**: Membership fees are billed monthly on a recurring basis. By enrolling in a Membership Plan, you authorize Mobile-Tech, LLC to charge your payment method on file each billing cycle until the Membership is cancelled.
+- **Setup Fee**: New Memberships require a one-time Setup & Home Tech Survey fee, which covers the first month of Membership. This fee is due at signup.
+- **Cancellation**: You may cancel your Membership at any time after the initial three-month term by contacting us at 520-314-7152 or mobiletechllcaz@gmail.com. Cancellation stops future billing; fees already billed are non-refundable except as required by law.
+- **Included Support Allowance**: Each Membership Plan includes a monthly allowance of technician support time, as described on our Pricing page. This allowance resets monthly, does not roll over, and cannot be banked or transferred. Support beyond the included allowance is billed at the applicable member hourly rate.
+- **Required Support Tooling**: Maintaining Mobile-Tech, LLC's approved remote-management and remote-assistance software on enrolled devices is a condition of continued Membership coverage for those devices, where the device's platform permits it.
+- **Scope**: Membership Plans cover ongoing management, troubleshooting, and support for enrolled devices as described on our Pricing page. Larger installations, replacements, or new deployments are scoped and billed separately as Projects.
 
 ## Limitation of Liability
 
@@ -92,6 +107,14 @@ While we disclaim warranties, Mobile-Tech, LLC commits to:
 - We are not responsible for pre-existing hardware failures or manufacturing defects
 - Third-party software issues may be outside our direct control
 - Some repairs may require manufacturer service or replacement parts
+
+## Membership Termination
+
+Either party may end a Membership relationship:
+
+- **By the Member**: You may cancel at any time after the initial three-month term, as described above.
+- **By Mobile-Tech, LLC**: We may pause, decline, or terminate a Membership in cases of non-payment, abusive or unsafe conduct toward our staff, repeated breakdown of cooperation or trust, or an inability to safely or responsibly support the enrolled environment. Where practical, we will provide notice and a reasonable opportunity to correct the issue before ending the Membership.
+- Upon termination by either party, recurring billing stops effective the agreed end date, any outstanding agreed work is completed or reconciled, and we will provide information reasonably necessary to help you transition to another provider.
 
 ## Dispute Resolution
 

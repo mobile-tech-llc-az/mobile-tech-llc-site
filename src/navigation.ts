@@ -8,6 +8,10 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
     {
+      text: 'Pricing',
+      href: getPermalink('/pricing'),
+    },
+    {
       text: 'About Us',
       href: getPermalink('/about'),
     },
@@ -156,6 +160,7 @@ export const footerData = {
       links: [
         { text: 'Residential', href: getPermalink('/services/residential') },
         { text: 'Commercial', href: getPermalink('/services/commercial') },
+        { text: 'Pricing', href: getPermalink('/pricing') },
       ],
     },
     {
@@ -200,6 +205,7 @@ export const footerData = {
     // },
   ],
   secondaryLinks: [
+    { text: 'Membership Values', href: getPermalink('/membership-values') },
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],

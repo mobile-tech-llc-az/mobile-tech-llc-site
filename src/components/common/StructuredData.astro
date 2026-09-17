@@ -1,0 +1,44 @@
+---
+import { SITE } from 'astrowind:config';
+import logoImage from '~/assets/images/mt-logo-transparent-graphic-only.png';
+
+const siteUrl = String(SITE?.site || 'https://www.mobile-tech-llc.com/').replace(/\/$/, '');
+const logoUrl = new URL(logoImage.src, siteUrl).toString();
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Mobile-Tech, LLC',
+  url: siteUrl,
+  logo: logoUrl,
+  telephone: '+1-520-314-7152',
+  email: 'mobiletechllcaz@gmail.com',
+  foundingDate: '2005',
+  description:
+    'Mobile-Tech, LLC is a personal IT department for the home, and enterprise IT support, serving Tucson, Arizona since 2005. Offering ongoing residential membership plans alongside one-time technology support and enterprise infrastructure solutions.',
+  areaServed: {
+    '@type': 'City',
+    name: 'Tucson, Arizona',
+  },
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      name: 'Residential Technology Membership Plans',
+      description: 'Ongoing personal IT department membership plans for Tucson-area homes.',
+    },
+    {
+      '@type': 'Offer',
+      name: 'One-Time Technology Support',
+      description: 'Hourly, non-member technology support for homes that prefer pay-as-you-go help.',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Enterprise IT Solutions',
+      description: 'Enterprise-grade infrastructure, networking, and business automation for Tucson businesses.',
+    },
+  ],
+  sameAs: ['https://share.google/JDPDAvLEeRYEsJGKX'],
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />

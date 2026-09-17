@@ -3,12 +3,16 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = {
-  title: 'Mobile-Tech LLC — Friendly Computer Help for Tucson Residents',
+  title: 'Mobile-Tech LLC - Friendly Computer Help for Tucson Residents',
   ignoreTitleTemplate: true,
+  description:
+    'Mobile-Tech, LLC is a personal IT department for Tucson-area homes, offering ongoing membership plans and friendly, patient one-time computer help. Serving Tucson, Arizona since 2005.',
 };
 ---
 
@@ -31,7 +35,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: '~/assets/images/Mobile-Tech-LLC.png',
+      src: '~/assets/images/mt-logo-transparent-graphic-only.png',
       alt: 'Mobile-Tech LLC Logo',
       class: 'w-64 h-auto mx-auto object-contain',
       width: undefined,
@@ -49,7 +53,8 @@ const metadata = {
       </span><br /><br />
       <span class="text-base">
         We help families and individuals in Tucson with all their technology problems. No judgment, no confusing tech
-        talk - just friendly, patient help.
+        talk, just friendly, patient help. Now offering ongoing membership plans, so you have a personal IT department
+        for your home instead of a break-fix repair call.
       </span>
     </Fragment>
   </Hero>
@@ -112,6 +117,38 @@ const metadata = {
     ]}
   />
 
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Now Offering: Personal IT Department Memberships"
+    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
+    columns={3}
+    items={[
+      {
+        title: 'Home Essentials - $79/mo',
+        description:
+          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Home Complete - $149/mo',
+        description:
+          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details along side you.',
+        icon: 'tabler:home-cog',
+      },
+      {
+        title: 'Home Concierge - $229+/mo',
+        description:
+          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
+        icon: 'tabler:crown',
+      },
+    ]}
+  />
+
+  <div class="text-center -mt-8 mb-16">
+    <Button variant="primary" href="/pricing" text="See Membership Plans & Pricing" icon="tabler:arrow-right" />
+  </div>
+
   <!-- Content Widget **************** -->
 
   <Content
@@ -130,7 +167,7 @@ const metadata = {
       {
         title: 'Honest Pricing',
         description:
-          'Clear, upfront hourly pricing with no hidden fees. We only recommend what you actually need. We work quickly to solve your problems.',
+          'Clear, upfront pricing, whether you choose a membership plan or pay hourly. We only recommend what you actually need.',
       },
       {
         title: 'Local Tucson Business',
@@ -196,6 +233,12 @@ const metadata = {
 
   <CallToAction
     actions={[
+      {
+        variant: 'primary',
+        text: 'See Membership Plans',
+        href: '/pricing',
+        icon: 'tabler:list-check',
+      },
       {
         variant: 'primary',
         text: 'Contact Us Today',

@@ -2,228 +2,273 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Prices from '~/components/widgets/Pricing.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Button from '~/components/ui/Button.astro';
 
 const metadata = {
-  title: 'Pricing',
+  title: 'Membership Pricing - Mobile-Tech, LLC',
+  description:
+    'Mobile-Tech membership plans: Home Essentials, Home Complete, and Home Concierge. Your personal IT department for the home, in Tucson, Arizona.',
+};
+
+const comparisonRows: Array<{ label: string; essentials: string; complete: string; concierge: string }> = [
+  { label: 'Managed computers', essentials: '1', complete: 'Up to 3', concierge: 'Up to 5' },
+  { label: 'Smartphones', essentials: '1', complete: '2', concierge: '4' },
+  { label: 'Tablets', essentials: '1', complete: '1', concierge: '2' },
+  { label: 'Printers & scanners', essentials: '-', complete: '✓', concierge: '✓' },
+  { label: 'TV / streaming locations', essentials: '-', complete: 'Up to 3', concierge: 'Up to 6' },
+  { label: 'Wi-Fi & home network support', essentials: 'Enrolled devices only', complete: '✓', concierge: '✓' },
+  { label: 'Audio / video systems', essentials: '-', complete: '1 standard system', concierge: 'Larger / multi-zone' },
+  { label: 'Smart-home & IoT devices', essentials: '-', complete: '✓', concierge: '✓' },
+  { label: 'Antivirus & security tools', essentials: '✓', complete: '✓', concierge: '✓' },
+  { label: 'Included help each month', essentials: '30 minutes', complete: '1 hour', concierge: '2 hours' },
+  { label: 'Proactive monitoring', essentials: '✓', complete: '✓', concierge: '✓' },
+  { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
+  { label: 'Purchase guidance before you buy', essentials: '✓', complete: '✓', concierge: '✓' },
+  { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
+  {
+    label: 'Includes everything in previous tier(s)',
+    essentials: '-',
+    complete: '✓ Home Essentials',
+    concierge: '✓ Home Essentials + Complete',
+  },
+  { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
+];
+
+const faqItems: Array<{ title: string; description: string }> = [
+  {
+    title: 'How is this different from a normal computer repair visit?',
+    description:
+      "Most repair shops only show up after something breaks. A membership is an ongoing relationship - we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
+  },
+  {
+    title: 'What happens if I need more help than my included time?',
+    description:
+      'Members are billed $99/hr for additional support beyond their monthly allowance, in 15-minute increments (onsite visits have a one-hour minimum). Your included time resets each month and does not roll over.',
+  },
+  {
+    title: 'What is the Setup & Home Tech Survey?',
+    description:
+      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+  },
+  {
+    title: 'Is there a minimum commitment?',
+    description:
+      'New memberships begin with an <strong>initial 3-month term</strong>, then continue month-to-month. After that, you can cancel anytime, just reach out and we will help you transition smoothly.',
+  },
+  {
+    title: 'Do I have to become a member to get help?',
+    description:
+      'No. If you just need one-time help, our non-member rate is $129.99/hr with a two-hour minimum. Members receive included monthly time plus a discounted $99/hr rate beyond that.',
+  },
+  {
+    title: 'What is not covered by a membership?',
+    description:
+      'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+  },
+  {
+    title: 'What does membership actually mean, beyond the price?',
+    description:
+      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+  },
+];
+
+const stripHtml = (html: string) => html.replace(/<[^>]+>/g, '');
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: stripHtml(item.description),
+    },
+  })),
 };
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Pricing"
-    title="Stellar Pricing for Every Journey"
-    subtitle="Choose the perfect plan that aligns with your cosmic goals."
+    tagline="Membership Plans"
+    title="Your Personal IT Department for the Home"
+    subtitle="Most computer help is break-fix: something goes wrong, you call a stranger, you start over. A Mobile-Tech membership is different - one local team that gets to know your home, watches over it proactively, and is there when you need us."
   />
 
   <!-- Pricing Widget ******************* -->
 
   <Prices
-    title="Our prices"
-    subtitle="Only pay for what you need"
+    title="Membership Plans"
+    subtitle="Pick the level of involvement that fits your household. Every plan includes real people, proactive monitoring, and a team that already knows your setup."
     prices={[
       {
-        title: 'basic',
-        subtitle: 'Optimal choice for personal use',
-        price: 29,
+        title: 'Home Essentials',
+        subtitle: '“Teach me and back me up.”',
+        price: 79,
         period: 'per month',
         items: [
-          {
-            description: 'Etiam in libero, et volutpat',
-          },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
+          { description: '1 managed computer, 1 phone, 1 tablet' },
+          { description: '30 minutes of included help each month' },
+          { description: 'Proactive monitoring & security tools' },
+          { description: 'Knowledge & training library access' },
+          { description: 'Purchase guidance before you buy' },
+          { description: '$199 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
+          icon: 'tabler:calendar',
         },
       },
       {
-        title: 'standard',
-        subtitle: 'Optimal choice for small teams',
-        price: 69,
-        period: 'Per Month',
+        title: 'Home Complete',
+        subtitle: '“Help me manage it.”',
+        price: 149,
+        period: 'per month',
         items: [
-          {
-            description: 'Proin vel laoreet',
-          },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
+          { description: 'Up to 3 computers, 2 phones, 1 tablet' },
+          { description: 'Printers, Wi-Fi & home network support' },
+          { description: 'Smart-home support, 1 standard Audio/Video system' },
+          { description: '1 hour of included help each month' },
+          { description: 'Priority scheduling' },
+          { description: 'Includes everything in Essentials' },
+          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
+          icon: 'tabler:calendar',
         },
         hasRibbon: true,
-        ribbonTitle: 'popular',
+        ribbonTitle: 'Most Popular',
       },
       {
-        title: 'premium',
-        subtitle: 'Optimal choice for companies',
-        price: 199,
-        period: 'Per Month',
+        title: 'Home Concierge',
+        subtitle: '“Handle it for me.”',
+        price: '229+',
+        period: 'per month',
         items: [
-          {
-            description: 'Curabitur suscipit risus',
-          },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
+          { description: 'Up to 5 computers, 4 phones, 2 tablets' },
+          { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
+          { description: '2 hours of included help each month' },
+          { description: 'Highest scheduling priority' },
+          { description: 'Additional devices +$15/mo each' },
+          { description: 'Includes everything in Essentials + Complete' },
+          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
-          target: '_blank',
-          text: 'Get started',
-          href: '#',
+          text: 'Get Started',
+          href: '/contact',
+          icon: 'tabler:calendar',
         },
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 -mt-8 mb-16 text-center">
+    <p class="text-sm text-gray-600 dark:text-slate-400">
+      Need more help than your monthly allowance covers? Additional support for members is <strong>$99/hr</strong>
+      (billed in 15-minute increments; onsite visits have a one-hour minimum). New memberships begin with a 3-month initial
+      term, then continue month-to-month.
+    </p>
+  </div>
 
-  <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
-    columns={2}
-    items={[
-      {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
-      },
-      {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
-      },
-      {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
-      },
-      {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
+  <!-- Comparison Table ******************* -->
 
-  <!-- Steps Widget ****************** -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mb-16">
+    <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl text-center mb-8">Compare Plans</h2>
+    <div class="overflow-x-auto rounded-lg border border-brand-light/20">
+      <table class="w-full text-sm text-left border-collapse">
+        <thead class="bg-brand-accent/10 dark:bg-brand-light">
+          <tr>
+            <th class="px-4 py-3 font-semibold text-brand-dark dark:text-white">&nbsp;</th>
+            <th class="px-4 py-3 font-semibold text-center text-brand-dark dark:text-white">Home Essentials</th>
+            <th class="px-4 py-3 font-semibold text-center text-brand-dark dark:text-white">Home Complete</th>
+            <th class="px-4 py-3 font-semibold text-center text-brand-dark dark:text-white">Home Concierge</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            comparisonRows.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white dark:bg-brand-medium' : 'bg-brand-accent/5 dark:bg-brand-light/30'}>
+                <td class="px-4 py-3 font-medium text-brand-dark/80 dark:text-secondary">{row.label}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.essentials}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.complete}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.concierge}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  <Steps
-    title="A guided journey from plans to creativity"
-    tagline="simplified process"
-    isReversed={true}
-    items={[
-      {
-        title: 'Explore plans',
-        icon: 'tabler:number-1',
-      },
-      {
-        title: 'Select a plan',
-        icon: 'tabler:number-2',
-      },
-      {
-        title: 'Sign Up / Log In',
-        icon: 'tabler:number-3',
-      },
-      {
-        title: 'Review order',
-        icon: 'tabler:number-4',
-      },
-      {
-        title: 'Enter payment details',
-        icon: 'tabler:number-5',
-      },
-      {
-        title: 'Confirmation',
-        icon: 'tabler:number-6',
-      },
-      {
-        title: 'Download and start using the template(s)',
-        icon: 'tabler:number-7',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  <!-- Hourly / Non-Member Rate Callout ******************* -->
+
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 mb-16">
+    <div
+      class="rounded-lg border border-brand-light/20 bg-white dark:bg-brand-medium shadow px-6 py-8 sm:px-10 sm:py-10 text-center"
+    >
+      <h2 class="text-xl font-bold tracking-tight dark:text-white sm:text-2xl mb-2">Prefer to Pay As You Go?</h2>
+      <p class="text-gray-600 dark:text-slate-400 mb-4">
+        No membership required. If you just need one-time, non-member help, our standard rate is:
+      </p>
+      <div class="flex items-center justify-center mb-2">
+        <span class="text-4xl font-extrabold dark:text-white">$129.99</span>
+        <span class="text-base text-gray-600 dark:text-slate-400 ml-2">/hour</span>
+      </div>
+      <p class="text-sm text-gray-500 dark:text-slate-500 mb-6">Two-hour minimum ($259.98 minimum charge)</p>
+      <Button variant="primary" href="/contact" text="Book a Visit" icon="tabler:calendar" />
+    </div>
+  </section>
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Pricing FAQs"
-    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    title="Membership FAQs"
+    subtitle="Questions about how Mobile-Tech membership works."
     columns={1}
     items={[
       {
-        title: 'Do the plans come with customer support?',
+        title: 'How is this different from a normal computer repair visit?',
         description:
-          'Absolutely, all plans include access to our dedicated customer support to assist you with any queries or concerns.',
+          "Most repair shops only show up after something breaks. A membership is an ongoing relationship - we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
       },
       {
-        title: 'Is there a trial period for the different plans?',
+        title: 'What happens if I need more help than my included time?',
         description:
-          "Unfortunately, we don't offer trial periods for the plans. However, you can check out our demo section to preview the quality of our templates.",
+          'Members are billed $99/hr for additional support beyond their monthly allowance, in 15-minute increments (onsite visits have a one-hour minimum). Your included time resets each month and does not roll over.',
       },
       {
-        title: 'Can I switch between plans?',
+        title: 'What is the Setup & Home Tech Survey?',
         description:
-          'Certainly! You can easily upgrade or downgrade your plan, at any time, to find the one that best suits your evolving requirements.',
+          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
       },
       {
-        title: 'What payment methods do you accept?',
+        title: 'Is there a minimum commitment?',
         description:
-          'We accept major credit cards and online payment methods to ensure a convenient and secure transaction process.',
+          'New memberships begin with an <strong>initial 3-month term</strong>, then continue month-to-month. After that, you can cancel anytime, just reach out and we will help you transition smoothly.',
       },
       {
-        title: 'Are there any hidden fees beyond the displayed cost?',
+        title: 'Do I have to become a member to get help?',
         description:
-          'No, the subscription cost covers all the features and templates listed under each plan. There are no hidden fees or extra charges.',
+          'No. If you just need one-time help, our non-member rate is $129.99/hr with a two-hour minimum. Members receive included monthly time plus a discounted $99/hr rate beyond that.',
+      },
+      {
+        title: 'What is not covered by a membership?',
+        description:
+          'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+      },
+      {
+        title: 'What does membership actually mean, beyond the price?',
+        description:
+          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
       },
     ]}
   />
@@ -231,14 +276,21 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Ready to boost your projects?"
-    subtitle="Join our community of satisfied customers who have transformed their work with our templates."
     actions={[
       {
         variant: 'primary',
-        text: 'Get started now',
-        href: '/',
+        text: 'Call Now: 520-314-7152',
+        href: 'tel:520-314-7152',
+        icon: 'tabler:phone',
+      },
+      {
+        variant: 'primary',
+        text: 'Book a Visit',
+        href: '/contact',
+        icon: 'tabler:calendar',
       },
     ]}
+    title="Ready for a Personal IT Department of Your Own?"
+    subtitle="Let's find the right plan for your household."
   />
 </Layout>
