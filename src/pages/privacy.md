@@ -1,11 +1,12 @@
 ---
 title: 'Privacy Policy'
+description: 'How Mobile-Tech, LLC collects, uses, and protects your information across our technology support services and residential Membership Plans.'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: September 3, 2025
+_Last updated_: September 17, 2026
 
-This Privacy Policy describes how Mobile-Tech, LLC collects, uses, and protects your information when you use our technology support services or visit our website.
+This Privacy Policy describes how Mobile-Tech, LLC collects, uses, and protects your information when you use our technology support services or Membership Plans, or visit our website.
 
 ## Information We Collect
 
@@ -16,6 +17,20 @@ When providing technology support services, we may collect:
 - **Contact Information**: Name, phone number, email address, service location, and other sensitive information
 - **Technical Information**: Details about your devices, systems, and technology issues
 - **Service Records**: Documentation of services provided and recommendations made
+
+### Membership Monitoring Information
+
+Devices enrolled in a Membership Plan run remote-management and monitoring software so we can watch for problems proactively. This software may collect:
+
+- **Device Health Data**: Ongoing information about device status, security tools, and system performance
+- **Remote Access Logs**: Records of when and how our team accessed an enrolled device to provide support
+- **Household Technology Profile**: A record of your devices, accounts (at a high level, not passwords), network, and support history, so any technician assisting you already understands your setup
+
+This monitoring is limited to enrolled devices and stops if a device is removed from your Membership or your Membership ends.
+
+### Payment Information
+
+For Membership Plans, we keep a payment method on file to process your recurring monthly charge. Card and payment details are handled by our payment processor; we do not store full card numbers ourselves.
 
 ### Website Information
 
@@ -63,8 +78,9 @@ Mobile-Tech, LLC does not sell, rent, or trade your personal information. We may
 
 ### Service Providers
 
-- Payment processing companies (for billing purposes)
+- Payment processing companies (for one-time billing and recurring Membership charges)
 - Scheduling and calendar systems (for appointment management)
+- Remote-management and monitoring software vendors (for enrolled Membership devices)
 - Technology vendors (when required for specific repair or support services)
 
 ### Legal Requirements

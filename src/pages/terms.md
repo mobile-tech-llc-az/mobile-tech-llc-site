@@ -1,5 +1,6 @@
 ---
 title: 'Terms of Service'
+description: "Terms of Service for Mobile-Tech, LLC's technology support services and residential Membership Plans in Tucson, Arizona."
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 

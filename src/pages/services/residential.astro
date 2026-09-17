@@ -9,10 +9,31 @@ import Button from '~/components/ui/Button.astro';
 
 const metadata = {
   title: 'Residential Tech Support Services - Mobile-Tech, LLC',
+  description:
+    'Ongoing personal IT department membership plans and one-time computer help for Tucson-area homes. Mobile-Tech gets to know your home and is there when something breaks.',
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Residential Technology Support',
+  name: 'Mobile-Tech Residential Services',
+  provider: {
+    '@type': 'ProfessionalService',
+    name: 'Mobile-Tech, LLC',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Tucson, Arizona',
+  },
+  description:
+    'Ongoing personal IT department membership plans and one-time technology help for Tucson-area homes, including computer repair, network support, smart-home setup, and technology purchasing guidance.',
 };
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
   <!-- Hero Widget ******************* -->
 
   <Hero

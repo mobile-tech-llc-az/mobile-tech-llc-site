@@ -1,5 +1,6 @@
 ---
 title: 'Membership Values'
+description: 'What Mobile-Tech membership really means: our promise to you, what we ask of you in return, and how we handle it if something is not working.'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 

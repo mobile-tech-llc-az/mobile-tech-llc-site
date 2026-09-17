@@ -11,7 +11,7 @@ metadata:
   title:
     default: Mobile-Tech, LLC
     template: '%s - Mobile-Tech, LLC'
-  description: 'Mobile-Tech has been Tucson’s trusted IT support since 2005. We help homes and businesses with computers, Wi-Fi, servers, and more, delivering fast, local, and reliable service you can count on.'
+  description: 'Mobile-Tech is a personal IT department for the home, and trusted enterprise IT support, in Tucson since 2005. Choose an ongoing membership plan or one-time help with computers, Wi-Fi, servers, and more.'
   robots:
     index: true
     follow: true
@@ -40,19 +40,19 @@ apps:
       isEnabled: true
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
-        index: true
+        index: false # No posts published yet; re-enable once real content is live
 
     list:
       isEnabled: true
       pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
-        index: true
+        index: false # No posts published yet; re-enable once real content is live
 
     category:
       isEnabled: true
       pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
-        index: true
+        index: false # No posts published yet; re-enable once real content is live
 
     tag:
       isEnabled: true

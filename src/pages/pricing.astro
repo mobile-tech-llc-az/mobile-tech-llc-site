@@ -35,9 +35,64 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   },
   { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
 ];
+
+const faqItems: Array<{ title: string; description: string }> = [
+  {
+    title: 'How is this different from a normal computer repair visit?',
+    description:
+      "Most repair shops only show up after something breaks. A membership is an ongoing relationship - we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
+  },
+  {
+    title: 'What happens if I need more help than my included time?',
+    description:
+      'Members are billed $99/hr for additional support beyond their monthly allowance, in 15-minute increments (onsite visits have a one-hour minimum). Your included time resets each month and does not roll over.',
+  },
+  {
+    title: 'What is the Setup & Home Tech Survey?',
+    description:
+      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+  },
+  {
+    title: 'Is there a minimum commitment?',
+    description:
+      'New memberships begin with an <strong>initial 3-month term</strong>, then continue month-to-month. After that, you can cancel anytime, just reach out and we will help you transition smoothly.',
+  },
+  {
+    title: 'Do I have to become a member to get help?',
+    description:
+      'No. If you just need one-time help, our non-member rate is $129.99/hr with a two-hour minimum. Members receive included monthly time plus a discounted $99/hr rate beyond that.',
+  },
+  {
+    title: 'What is not covered by a membership?',
+    description:
+      'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+  },
+  {
+    title: 'What does membership actually mean, beyond the price?',
+    description:
+      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+  },
+];
+
+const stripHtml = (html: string) => html.replace(/<[^>]+>/g, '');
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.title,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: stripHtml(item.description),
+    },
+  })),
+};
 ---
 
 <Layout metadata={metadata}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
   <!-- HeroText Widget ******************* -->
 
   <HeroText
@@ -209,6 +264,11 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
         title: 'What is not covered by a membership?',
         description:
           'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+      },
+      {
+        title: 'What does membership actually mean, beyond the price?',
+        description:
+          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
       },
     ]}
   />
