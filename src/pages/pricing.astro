@@ -13,6 +13,12 @@ const metadata = {
 };
 
 const comparisonRows: Array<{ label: string; essentials: string; complete: string; concierge: string }> = [
+  {
+    label: 'Includes everything in previous tier(s)',
+    essentials: '-',
+    complete: '✓ Home Essentials',
+    concierge: '✓ Home Essentials + Complete',
+  },
   { label: 'Managed computers', essentials: '1', complete: 'Up to 3', concierge: 'Up to 5' },
   { label: 'Smartphones', essentials: '1', complete: '2', concierge: '4' },
   { label: 'Tablets', essentials: '1', complete: '1', concierge: '2' },
@@ -27,12 +33,6 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Purchase guidance before you buy', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
-  {
-    label: 'Includes everything in previous tier(s)',
-    essentials: '-',
-    complete: '✓ Home Essentials',
-    concierge: '✓ Home Essentials + Complete',
-  },
   { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
 ];
 
@@ -132,12 +132,12 @@ const faqSchema = {
         price: 149,
         period: 'per month',
         items: [
+          { description: 'Includes everything in Essentials' },
           { description: 'Up to 3 computers, 2 phones, 1 tablet' },
           { description: 'Printers, Wi-Fi & home network support' },
           { description: 'Smart-home support, 1 standard Audio/Video system' },
           { description: '1 hour of included help each month' },
           { description: 'Priority scheduling' },
-          { description: 'Includes everything in Essentials' },
           { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
@@ -154,12 +154,12 @@ const faqSchema = {
         price: '229+',
         period: 'per month',
         items: [
+          { description: 'Includes everything in Essentials + Complete' },
           { description: 'Up to 5 computers, 4 phones, 2 tablets' },
           { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
           { description: '2 hours of included help each month' },
           { description: 'Highest scheduling priority' },
           { description: 'Additional devices +$15/mo each' },
-          { description: 'Includes everything in Essentials + Complete' },
           { description: '$299 Setup & Home Tech Survey (includes your first month)' },
         ],
         callToAction: {
