@@ -28,12 +28,13 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Audio / video systems', essentials: '-', complete: '1 standard system', concierge: 'Larger / multi-zone' },
   { label: 'Smart-home & IoT devices', essentials: '-', complete: '✓', concierge: '✓' },
   { label: 'Antivirus & security tools', essentials: '✓', complete: '✓', concierge: '✓' },
-  { label: 'Included help each month', essentials: '30 minutes', complete: '1 hour', concierge: '2 hours' },
+  { label: 'Included virtual help each month', essentials: '30 minutes', complete: '1 hour', concierge: '2 hours' },
   { label: 'Proactive monitoring', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Purchase guidance before you buy', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
-  { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
+  { label: 'Setup & Home Tech Survey (one-time)', essentials: '$199', complete: '$299', concierge: '$299' },
+  { label: 'Initial commitment', essentials: '3 months*', complete: '3 months*', concierge: '3 months*' },
 ];
 
 const faqItems: Array<{ title: string; description: string }> = [
@@ -209,6 +210,10 @@ const faqSchema = {
     </div>
   </section>
 
+  <p class="text-sm text-gray-500 dark:text-slate-500 text-center max-w-3xl mx-auto px-4 sm:px-6 mb-16">
+    *New memberships require a 3-month initial commitment, then continue month-to-month.
+  </p>
+
   <!-- Hourly / Non-Member Rate Callout ******************* -->
 
   <section class="max-w-3xl mx-auto px-4 sm:px-6 mb-16">
@@ -224,6 +229,9 @@ const faqSchema = {
         <span class="text-base text-gray-600 dark:text-slate-400 ml-2">/hour</span>
       </div>
       <p class="text-sm text-gray-500 dark:text-slate-500 mb-6">Two-hour minimum ($259.98 minimum charge)</p>
+      <p class="text-sm text-gray-600 dark:text-slate-400 mb-6">
+        Already a member? You pay a discounted <strong>$99/hour</strong> instead.
+      </p>
       <Button variant="primary" href="/contact" text="Book a Visit" icon="tabler:calendar" />
     </div>
   </section>
