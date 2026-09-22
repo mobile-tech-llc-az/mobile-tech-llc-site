@@ -71,7 +71,7 @@ const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'What does membership actually mean, beyond the price?',
     description:
-      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-white">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
   },
 ];
 
@@ -198,10 +198,10 @@ const faqSchema = {
           {
             comparisonRows.map((row, i) => (
               <tr class={i % 2 === 0 ? 'bg-white dark:bg-brand-medium' : 'bg-brand-accent/5 dark:bg-brand-light/30'}>
-                <td class="px-4 py-3 font-medium text-brand-dark/80 dark:text-secondary">{row.label}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.essentials}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.complete}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.concierge}</td>
+                <td class="px-4 py-3 font-medium text-brand-dark/80 dark:text-white">{row.label}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.essentials}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.complete}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.concierge}</td>
               </tr>
             ))
           }
@@ -276,7 +276,7 @@ const faqSchema = {
       {
         title: 'What does membership actually mean, beyond the price?',
         description:
-          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-white">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
       },
     ]}
   />
