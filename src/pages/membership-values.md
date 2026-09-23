@@ -8,6 +8,8 @@ _Last updated_: September 16, 2026
 
 This page is the human side of membership. It's not a legal document, that's what our [Terms of Service](/terms) are for. This is us telling you plainly what membership means, what you can expect from us, and what we ask of you in return.
 
+**The short version:** You're not locked into anything hidden. New memberships run for an initial 3-month term, then continue month-to-month. Extra help beyond your included time is $99/hour. If you ever want to cancel, just reach out, no cancellation fee, no runaround, we'll help you wrap up cleanly. Read on for the full picture.
+
 ## What Membership Really Means
 
 A Mobile-Tech membership isn't an hour bank, and it isn't a repair ticket. It's an ongoing relationship with a local team that gets to know your home. Here's what we strive for:
@@ -44,6 +46,20 @@ In return, we ask you to:
 - Give us reasonable access to your systems when you need our help.
 - Respect our appointment times, project boundaries, and the billing terms we agree to.
 - Remember that support works best as a partnership, not a one-way street.
+
+## How to Cancel
+
+There's no cancellation fee, no retention runaround, and no hard feelings. After your initial 3-month term, you can cancel anytime, for any reason.
+
+To cancel, call us at 520-314-7152, email us at mobiletechllcaz@gmail.com, or reach out through our [Contact page](/contact).
+
+Let us know you'd like to end your membership, and we'll schedule a short wrap-up conversation. In that conversation, we'll:
+
+- Confirm your cancellation date and stop billing from there.
+- Review any unused time from your current billing period. If we owe you something back for it, we'll settle up rather than let it disappear.
+- Make sure any open work gets finished or handed off cleanly, and that you have what you need going forward: your accounts, your passwords, and your setup documentation.
+
+If you're canceling because something about the service wasn't working for you, we'd genuinely like to know, see the "When Something's Not Working" section below for how we handle that.
 
 ## When Something's Not Working
 
