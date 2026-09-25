@@ -51,15 +51,52 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="text-lg">
-        <strong>Is your computer running slow? Getting pop-ups? Can't figure out your phone?</strong>
+        <strong>Slow computer? Scary pop-ups? Wi-Fi that won't reach the bedroom?</strong>
       </span><br /><br />
       <span class="text-base">
-        We help families and individuals in Tucson with all their technology problems. No judgment, no confusing tech
-        talk, just friendly, patient help. Now offering ongoing membership plans, so you have a personal IT department
-        for your home instead of a break-fix repair call.
+        Mobile-Tech is a local Tucson team that becomes your home's personal IT department. We help with computers,
+        phones, tablets, Wi-Fi, TVs, and printers, at your home or remotely. Unlike a one-time repair call, a membership
+        means we already know your setup, keep an eye out for problems before they start, and are there when you need
+        us. Just need one-time help? We do that too.
       </span>
     </Fragment>
   </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="A Personal IT Department for Your Home"
+    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
+    columns={3}
+    items={[
+      {
+        title: 'Home Essentials - $79/mo',
+        description:
+          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Home Complete - $149/mo',
+        description:
+          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details alongside you.',
+        icon: 'tabler:home-cog',
+      },
+      {
+        title: 'Home Concierge - $229+/mo',
+        description:
+          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
+        icon: 'tabler:crown',
+      },
+    ]}
+  />
+
+  <div class="text-center -mt-8 mb-16">
+    <p class="max-w-3xl mx-auto px-4 sm:px-6 mb-6 text-gray-600 dark:text-slate-400">
+      Every plan includes proactive monitoring, security tools, included help time each month, and a discounted $99/hr
+      rate for anything extra.
+    </p>
+    <Button variant="primary" href="/pricing" text="See Membership Plans & Pricing" icon="tabler:arrow-right" />
+  </div>
 
   <!-- Features Widget *************** -->
 
@@ -120,38 +157,6 @@ const metadata = {
   />
 
   <div class="mb-8 md:mb-12"></div>
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Now Offering: Personal IT Department Memberships"
-    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
-    columns={3}
-    items={[
-      {
-        title: 'Home Essentials - $79/mo',
-        description:
-          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
-        icon: 'tabler:device-laptop',
-      },
-      {
-        title: 'Home Complete - $149/mo',
-        description:
-          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details along side you.',
-        icon: 'tabler:home-cog',
-      },
-      {
-        title: 'Home Concierge - $229+/mo',
-        description:
-          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
-        icon: 'tabler:crown',
-      },
-    ]}
-  />
-
-  <div class="text-center -mt-8 mb-16">
-    <Button variant="primary" href="/pricing" text="See Membership Plans & Pricing" icon="tabler:arrow-right" />
-  </div>
 
   <!-- Content Widget **************** -->
 
@@ -227,7 +232,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">You're Not Alone</h3>
-      These problems happen to everyone! We've helped hundreds of Tucson families with an array of technology issues.
+      These problems happen to everyone. We've helped 100+ Tucson families solve them.
     </Fragment>
 
     <Fragment slot="bg">
@@ -260,7 +265,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      <strong>Same-day service available!</strong>
+      <strong>Friendly, local help, often same-day for Concierge members.</strong>
     </Fragment>
   </CallToAction>
 </Layout>
