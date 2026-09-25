@@ -32,7 +32,12 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Proactive monitoring', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Advice on buying new devices', essentials: '✓', complete: '✓', concierge: '✓' },
-  { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
+  {
+    label: 'Typical response time',
+    essentials: '24-48 hours on average',
+    complete: '24-48 hours on average',
+    concierge: 'Often same-day',
+  },
   { label: 'Setup & Home Tech Survey (one-time)', essentials: '$199', complete: '$299', concierge: '$299' },
   { label: 'Initial commitment', essentials: '3 months*', complete: '3 months*', concierge: '3 months*' },
 ];
@@ -116,10 +121,13 @@ const faqSchema = {
         items: [
           { description: '1 managed computer, 1 phone, 1 tablet' },
           { description: '30 minutes of included help each month' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: 'Response in 24-48 hours on average' },
           { description: 'Proactive monitoring & security tools' },
           { description: 'Knowledge & training library access' },
           { description: 'Advice on buying new devices' },
           { description: '$199 Setup & Home Tech Survey (includes your first month)' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -138,8 +146,9 @@ const faqSchema = {
           { description: 'Printers, Wi-Fi & home network support' },
           { description: 'Smart-home support, 1 standard Audio/Video system' },
           { description: '1 hour of included help each month' },
-          { description: 'Priority scheduling' },
+          { description: 'Extra help at the $99/hr member rate' },
           { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -159,9 +168,11 @@ const faqSchema = {
           { description: 'Up to 5 computers, 4 phones, 2 tablets' },
           { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
           { description: '2 hours of included help each month' },
-          { description: 'Highest scheduling priority' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: 'Often same-day response' },
           { description: 'Additional devices +$15/mo each' },
           { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
