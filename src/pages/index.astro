@@ -7,6 +7,10 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Button from '~/components/ui/Button.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Image from '~/components/common/Image.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'Mobile-Tech LLC - Friendly Computer Help for Tucson Residents',
@@ -14,6 +18,33 @@ const metadata = {
   description:
     'Mobile-Tech, LLC is a personal IT department for Tucson-area homes, offering ongoing membership plans and friendly, patient one-time computer help. Serving Tucson, Arizona since 2005.',
 };
+const commonProblems: Array<{ problem: string; outcome: string }> = [
+  {
+    problem: 'My computer is full and crawling.',
+    outcome:
+      "Cleaned up, photos backed up, and running smoothly again. If it's time for a new one, we'll help you choose.",
+  },
+  {
+    problem: "I keep getting scary pop-ups and I'm afraid to click anything.",
+    outcome: "Viruses and scams removed, protection set up, and you'll know how to spot the next one.",
+  },
+  {
+    problem: "I can't remember any of my passwords.",
+    outcome: "A simple password manager, so there's just one password to remember.",
+  },
+  {
+    problem: "The Wi-Fi doesn't reach my bedroom.",
+    outcome: 'Reliable Wi-Fi in the rooms you actually use.',
+  },
+  {
+    problem: "I'm scared of losing my family photos.",
+    outcome: "Photos backed up automatically, so they're safe even if a device fails.",
+  },
+  {
+    problem: 'Every time something breaks, I have to explain everything to a stranger.',
+    outcome: 'One local team that already knows your home and your devices.',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -198,47 +229,59 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Common Problems (problem -> outcome) ******************* -->
 
-  <Content
-    isAfterContent
-    title="Common Problems We Solve"
-    items={[
-      {
-        title: '"My computer is full and running slow"',
-        description:
-          "We clean up your computer, back up your photos to the cloud, and get it running smoothly again. If it's time for a new one, we'll help you choose a replacement that fits your needs and budget.",
-      },
-      {
-        title: '"I keep getting scary pop-up messages"',
-        description: 'We remove viruses and malware, then show you how to avoid them in the future.',
-      },
-      {
-        title: '"I forgot all my passwords"',
-        description:
-          'We help you reset passwords and set up a simple password manager so you only need to remember one master password.',
-      },
-      {
-        title: '"My WiFi doesn\'t reach my bedroom"',
-        description: 'We improve your WiFi coverage throughout your home so you can use the internet anywhere.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/devan-assisting-client.jpg',
-      alt: 'Devan from Mobile-Tech helping a customer with her laptop at home',
-      width: 1536,
-      height: 1024,
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">You're Not Alone</h3>
-      These problems happen to everyone. We've helped 100+ Tucson families solve them.
-    </Fragment>
-
+  <WidgetWrapper>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-brand-light/10 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+
+    <Headline title="Common Problems We Solve" />
+
+    <div class="md:flex md:items-center md:gap-12 mb-12">
+      <div class="md:basis-1/2 mb-8 md:mb-0">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">You're Not Alone</h3>
+        <p class="text-lg text-muted dark:text-slate-400">
+          These problems happen to everyone. We've helped 100+ Tucson families solve them.
+        </p>
+      </div>
+      <div class="md:basis-1/2">
+        <Image
+          src="~/assets/images/devan-assisting-client.jpg"
+          alt="Devan from Mobile-Tech helping a customer with her laptop at home"
+          class="mx-auto w-full rounded-lg shadow-lg"
+          width={1536}
+          height={1024}
+          widths={[400, 768]}
+          sizes="(max-width: 768px) 100vw, 560px"
+          layout="responsive"
+        />
+      </div>
+    </div>
+
+    <div
+      class="hidden md:grid md:grid-cols-2 md:gap-6 px-6 pb-3 text-sm font-semibold uppercase tracking-wide text-muted dark:text-slate-400"
+    >
+      <p>The problem</p>
+      <p>After Mobile-Tech</p>
+    </div>
+    <ul class="space-y-4">
+      {
+        commonProblems.map(({ problem, outcome }) => (
+          <li class="grid gap-3 md:grid-cols-2 md:gap-6 rounded-lg border border-brand-light/20 bg-white dark:bg-brand-medium p-5 md:px-6">
+            <p class="flex items-start gap-3 italic text-gray-700 dark:text-slate-300">
+              <Icon name="tabler:alert-circle" class="w-6 h-6 shrink-0 text-gray-400" />
+              <span>"{problem}"</span>
+            </p>
+            <p class="flex items-start gap-3 font-medium dark:text-white">
+              <Icon name="tabler:circle-check" class="w-6 h-6 shrink-0 text-primary" />
+              <span>{outcome}</span>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </WidgetWrapper>
 
   <!-- CallToAction Widget *********** -->
 
