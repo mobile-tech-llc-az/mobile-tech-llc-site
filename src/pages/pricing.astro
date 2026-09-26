@@ -38,7 +38,7 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
     complete: '24-48 hours on average',
     concierge: 'Often same-day',
   },
-  { label: 'Setup & Home Tech Survey (one-time)', essentials: '$199', complete: '$299', concierge: '$299' },
+  { label: 'One-time Setup & Home Tech Survey fee', essentials: '$120', complete: '$150', concierge: '$70' },
   { label: 'Initial commitment', essentials: '3 months*', complete: '3 months*', concierge: '3 months*' },
 ];
 
@@ -56,7 +56,7 @@ const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'What is the Setup & Home Tech Survey?',
     description:
-      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup.",
   },
   {
     title: 'Is there a minimum commitment?',
@@ -71,7 +71,7 @@ const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'What is not covered by a membership?',
     description:
-      'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+      'Memberships cover ongoing troubleshooting, management, and support for the covered technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new device purchase and setup, or a security camera system installation, are scoped and quoted separately.',
   },
   {
     title: 'What does membership actually mean, beyond the price?',
@@ -107,6 +107,10 @@ const faqSchema = {
     subtitle="Most computer help is break-fix: something goes wrong, you call a stranger, you start over. A Mobile-Tech membership is different - one local team that gets to know your home, watches over it proactively, and is there when you need us."
   />
 
+  <div class="text-center">
+    <Button variant="secondary" href="#faqs" text="Membership FAQs" icon="tabler:help-circle" />
+  </div>
+
   <!-- Pricing Widget ******************* -->
 
   <Prices
@@ -121,12 +125,12 @@ const faqSchema = {
         items: [
           { description: '1 managed computer, 1 phone, 1 tablet' },
           { description: '30 minutes of included help each month' },
-          { description: 'Extra help at the $99/hr member rate' },
           { description: 'Response in 24-48 hours on average' },
           { description: 'Proactive monitoring & security tools' },
           { description: 'Knowledge & training library access' },
           { description: 'Advice on buying new devices' },
-          { description: '$199 Setup & Home Tech Survey (includes your first month)' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: '$120 one-time Setup & Home Tech Survey fee' },
           { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
@@ -147,7 +151,7 @@ const faqSchema = {
           { description: 'Smart-home support, 1 standard Audio/Video system' },
           { description: '1 hour of included help each month' },
           { description: 'Extra help at the $99/hr member rate' },
-          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: '$150 one-time Setup & Home Tech Survey fee' },
           { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
@@ -168,10 +172,10 @@ const faqSchema = {
           { description: 'Up to 5 computers, 4 phones, 2 tablets' },
           { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
           { description: '2 hours of included help each month' },
-          { description: 'Extra help at the $99/hr member rate' },
           { description: 'Often same-day response' },
           { description: 'Additional devices +$15/mo each' },
-          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: '$70 one-time Setup & Home Tech Survey fee' },
           { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
@@ -269,7 +273,7 @@ const faqSchema = {
       {
         title: 'What is the Setup & Home Tech Survey?',
         description:
-          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup.",
       },
       {
         title: 'Is there a minimum commitment?',
@@ -284,7 +288,7 @@ const faqSchema = {
       {
         title: 'What is not covered by a membership?',
         description:
-          'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+          'Memberships cover ongoing troubleshooting, management, and support for the covered technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new device purchase and setup, or a security camera system installation, are scoped and quoted separately.',
       },
       {
         title: 'What does membership actually mean, beyond the price?',
