@@ -57,7 +57,7 @@ Let us know you'd like to end your membership, and we'll schedule a short wrap-u
 
 - Confirm your cancellation date and stop billing from there.
 - Review any unused time from your current billing period. If we owe you something back for it, we'll settle up rather than let it disappear.
-- Make sure any open work gets finished or handed off cleanly, and that you have what you need going forward: your accounts, your passwords, and your setup documentation.
+- Make sure any open work gets finished or handed off cleanly, and that you have what you need going forward.
 
 If you're canceling because something about the service wasn't working for you, we'd genuinely like to know, see the "When Something's Not Working" section below for how we handle that.
 
