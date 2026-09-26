@@ -7,6 +7,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Button from '~/components/ui/Button.astro';
+import CommonProblems from '~/components/widgets/CommonProblems.astro';
 
 const metadata = {
   title: 'Mobile-Tech LLC - Friendly Computer Help for Tucson Residents',
@@ -37,27 +38,66 @@ const metadata = {
     image={{
       src: '~/assets/images/mt-logo-transparent-graphic-only.png',
       alt: 'Mobile-Tech LLC Logo',
-      class: 'w-64 h-auto mx-auto object-contain',
-      width: undefined,
-      height: undefined,
+      class: 'w-80 h-auto mx-auto object-contain',
+      width: 320,
+      height: 320,
+      widths: [320, 640],
+      sizes: '20rem',
     }}
   >
     <Fragment slot="title">
-      Friendly <span class="text-[#816bb1]">Computer Help</span><br class="block sm:hidden" />
+      Friendly <span class="text-[#816bb1] sm:pr-[0.25em]">Computer Help</span><br class="block sm:hidden" />
       <span class="hidden sm:inline">for </span>Tucson <span class="hidden xl:inline">Area </span>Residents
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="text-lg">
-        <strong>Is your computer running slow? Getting pop-ups? Can't figure out your phone?</strong>
+        <strong>Slow computer? Scary pop-ups? Wi-Fi that won't reach the bedroom?</strong>
       </span><br /><br />
       <span class="text-base">
-        We help families and individuals in Tucson with all their technology problems. No judgment, no confusing tech
-        talk, just friendly, patient help. Now offering ongoing membership plans, so you have a personal IT department
-        for your home instead of a break-fix repair call.
+        Mobile-Tech is a local Tucson team that becomes your home's personal IT department. We help with computers,
+        phones, tablets, Wi-Fi, TVs, and printers, at your home or remotely. Unlike a one-time repair call, a membership
+        means we already know your setup, keep an eye out for problems before they start, and are there when you need
+        us. Just need one-time help? We do that too.
       </span>
     </Fragment>
   </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="A Personal IT Department for Your Home"
+    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
+    columns={3}
+    items={[
+      {
+        title: 'Home Essentials ($79/mo)',
+        description:
+          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'Home Complete ($149/mo)',
+        description:
+          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details alongside you.',
+        icon: 'tabler:home-cog',
+      },
+      {
+        title: 'Home Concierge ($229+/mo)',
+        description:
+          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
+        icon: 'tabler:crown',
+      },
+    ]}
+  />
+
+  <div class="text-center -mt-8 mb-16">
+    <p class="max-w-3xl mx-auto px-4 sm:px-6 mb-6 text-gray-600 dark:text-slate-400">
+      Every plan includes proactive monitoring, security tools, included help time each month, and a discounted $99/hr
+      rate for anything extra.
+    </p>
+    <Button variant="primary" href="/pricing" text="See Membership Plans & Pricing" icon="tabler:arrow-right" />
+  </div>
 
   <!-- Features Widget *************** -->
 
@@ -111,43 +151,13 @@ const metadata = {
       {
         title: 'Printer Setup & Troubleshooting',
         description:
-          'Setting up new printers, fixing printing problems, and helping you print from your phone or tablet. We prefer reliable laser printers that just work.',
+          "Setting up new printers, fixing printing problems, and helping you print from your phone or tablet. If you're shopping for a new one, we can recommend a reliable model that fits how you print.",
         icon: 'tabler:printer',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Now Offering: Personal IT Department Memberships"
-    subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
-    columns={3}
-    items={[
-      {
-        title: 'Home Essentials - $79/mo',
-        description:
-          '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
-        icon: 'tabler:device-laptop',
-      },
-      {
-        title: 'Home Complete - $149/mo',
-        description:
-          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details along side you.',
-        icon: 'tabler:home-cog',
-      },
-      {
-        title: 'Home Concierge - $229+/mo',
-        description:
-          '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
-        icon: 'tabler:crown',
-      },
-    ]}
-  />
-
-  <div class="text-center -mt-8 mb-16">
-    <Button variant="primary" href="/pricing" text="See Membership Plans & Pricing" icon="tabler:arrow-right" />
-  </div>
+  <div class="mb-8 md:mb-12"></div>
 
   <!-- Content Widget **************** -->
 
@@ -189,45 +199,9 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Common Problems (problem -> outcome) ******************* -->
 
-  <Content
-    isAfterContent
-    title="Common Problems We Solve"
-    items={[
-      {
-        title: '"My computer is full and running slow"',
-        description:
-          "We clean up your computer, backup photos to the cloud, and make it run like new again. If it's old, we'll upgrade it.",
-      },
-      {
-        title: '"I keep getting scary pop-up messages"',
-        description: 'We remove viruses and malware, then show you how to avoid them in the future.',
-      },
-      {
-        title: '"I forgot all my passwords"',
-        description:
-          'We help you reset passwords and set up a simple password manager so you only need to remember one master password.',
-      },
-      {
-        title: '"My WiFi doesn\'t reach my bedroom"',
-        description: 'We improve your WiFi coverage throughout your home so you can use the internet anywhere.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Computer help for everyone',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">You're Not Alone</h3>
-      These problems happen to everyone! We've helped hundreds of Tucson families with an array of technology issues.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-brand-light/10 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <CommonProblems />
 
   <!-- CallToAction Widget *********** -->
 
@@ -248,11 +222,13 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Ready to Get Your<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Technology Working?</span>
+      Ready to Get Your<br class="block sm:hidden" /><span class="sm:whitespace-nowrap sm:ml-[0.25em]">
+        Technology Working?</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
-      <strong>Same-day service available!</strong>
+      <strong>Friendly, local help, often same-day for Concierge members.</strong>
     </Fragment>
   </CallToAction>
 </Layout>

@@ -7,12 +7,18 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Button from '~/components/ui/Button.astro';
 
 const metadata = {
-  title: 'Membership Pricing - Mobile-Tech, LLC',
+  title: 'Membership Pricing',
   description:
     'Mobile-Tech membership plans: Home Essentials, Home Complete, and Home Concierge. Your personal IT department for the home, in Tucson, Arizona.',
 };
 
 const comparisonRows: Array<{ label: string; essentials: string; complete: string; concierge: string }> = [
+  {
+    label: 'Includes everything in previous tier(s)',
+    essentials: '-',
+    complete: '✓ Home Essentials',
+    concierge: '✓ Home Essentials + Complete',
+  },
   { label: 'Managed computers', essentials: '1', complete: 'Up to 3', concierge: 'Up to 5' },
   { label: 'Smartphones', essentials: '1', complete: '2', concierge: '4' },
   { label: 'Tablets', essentials: '1', complete: '1', concierge: '2' },
@@ -22,25 +28,31 @@ const comparisonRows: Array<{ label: string; essentials: string; complete: strin
   { label: 'Audio / video systems', essentials: '-', complete: '1 standard system', concierge: 'Larger / multi-zone' },
   { label: 'Smart-home & IoT devices', essentials: '-', complete: '✓', concierge: '✓' },
   { label: 'Antivirus & security tools', essentials: '✓', complete: '✓', concierge: '✓' },
-  { label: 'Included help each month', essentials: '30 minutes', complete: '1 hour', concierge: '2 hours' },
+  { label: 'Included virtual help each month', essentials: '30 minutes', complete: '1 hour', concierge: '2 hours' },
   { label: 'Proactive monitoring', essentials: '✓', complete: '✓', concierge: '✓' },
   { label: 'Knowledge & training library', essentials: '✓', complete: '✓', concierge: '✓' },
-  { label: 'Purchase guidance before you buy', essentials: '✓', complete: '✓', concierge: '✓' },
-  { label: 'Scheduling priority', essentials: 'Standard', complete: 'Priority', concierge: 'Highest' },
+  { label: 'Advice on buying new devices', essentials: '✓', complete: '✓', concierge: '✓' },
   {
-    label: 'Includes everything in previous tier(s)',
-    essentials: '-',
-    complete: '✓ Home Essentials',
-    concierge: '✓ Home Essentials + Complete',
+    label: 'Typical response time',
+    essentials: '24-48 hours on average',
+    complete: '24-48 hours on average',
+    concierge: 'Often same-day',
   },
-  { label: 'Setup & Home Tech Survey', essentials: '$199', complete: '$299', concierge: '$299' },
+  { label: 'One-time Setup & Home Tech Survey fee', essentials: '$120', complete: '$150', concierge: '$70' },
+  { label: 'Initial commitment', essentials: '3 months*', complete: '3 months*', concierge: '3 months*' },
+];
+
+const comparisonPlans: Array<{ name: string; key: 'essentials' | 'complete' | 'concierge' }> = [
+  { name: 'Home Essentials', key: 'essentials' },
+  { name: 'Home Complete', key: 'complete' },
+  { name: 'Home Concierge', key: 'concierge' },
 ];
 
 const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'How is this different from a normal computer repair visit?',
     description:
-      "Most repair shops only show up after something breaks. A membership is an ongoing relationship - we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
+      "Most repair shops only show up after something breaks. A membership is an ongoing relationship: we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
   },
   {
     title: 'What happens if I need more help than my included time?',
@@ -50,7 +62,7 @@ const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'What is the Setup & Home Tech Survey?',
     description:
-      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+      "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup.",
   },
   {
     title: 'Is there a minimum commitment?',
@@ -65,12 +77,12 @@ const faqItems: Array<{ title: string; description: string }> = [
   {
     title: 'What is not covered by a membership?',
     description:
-      'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+      'Memberships cover ongoing troubleshooting, management, and support for the covered technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new device purchase and setup, or a security camera system installation, are scoped and quoted separately.',
   },
   {
     title: 'What does membership actually mean, beyond the price?',
     description:
-      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+      'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-white">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
   },
 ];
 
@@ -98,8 +110,12 @@ const faqSchema = {
   <HeroText
     tagline="Membership Plans"
     title="Your Personal IT Department for the Home"
-    subtitle="Most computer help is break-fix: something goes wrong, you call a stranger, you start over. A Mobile-Tech membership is different - one local team that gets to know your home, watches over it proactively, and is there when you need us."
+    subtitle="Most computer help is break-fix: something goes wrong, you call a stranger, you start over. A Mobile-Tech membership is different: one local team that gets to know your home, watches over it proactively, and is there when you need us."
   />
+
+  <div class="text-center">
+    <Button variant="secondary" href="#faqs" text="Membership FAQs" icon="tabler:help-circle" />
+  </div>
 
   <!-- Pricing Widget ******************* -->
 
@@ -114,11 +130,14 @@ const faqSchema = {
         period: 'per month',
         items: [
           { description: '1 managed computer, 1 phone, 1 tablet' },
-          { description: '30 minutes of included help each month' },
+          { description: 'Response in 24-48 hours on average' },
           { description: 'Proactive monitoring & security tools' },
           { description: 'Knowledge & training library access' },
-          { description: 'Purchase guidance before you buy' },
-          { description: '$199 Setup & Home Tech Survey (includes your first month)' },
+          { description: 'Advice on buying new devices' },
+          { description: '30 minutes of included help each month' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: '$120 one-time Setup & Home Tech Survey fee' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -132,13 +151,14 @@ const faqSchema = {
         price: 149,
         period: 'per month',
         items: [
+          { description: 'Includes everything in Essentials' },
           { description: 'Up to 3 computers, 2 phones, 1 tablet' },
           { description: 'Printers, Wi-Fi & home network support' },
           { description: 'Smart-home support, 1 standard Audio/Video system' },
           { description: '1 hour of included help each month' },
-          { description: 'Priority scheduling' },
-          { description: 'Includes everything in Essentials' },
-          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: '$150 one-time Setup & Home Tech Survey fee' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -154,13 +174,15 @@ const faqSchema = {
         price: '229+',
         period: 'per month',
         items: [
+          { description: 'Includes everything in Essentials + Complete' },
           { description: 'Up to 5 computers, 4 phones, 2 tablets' },
           { description: 'Up to 6 TV/streaming locations, multi-zone Audio/Video system' },
-          { description: '2 hours of included help each month' },
-          { description: 'Highest scheduling priority' },
           { description: 'Additional devices +$15/mo each' },
-          { description: 'Includes everything in Essentials + Complete' },
-          { description: '$299 Setup & Home Tech Survey (includes your first month)' },
+          { description: 'Often same-day response' },
+          { description: '2 hours of included help each month' },
+          { description: 'Extra help at the $99/hr member rate' },
+          { description: '$70 one-time Setup & Home Tech Survey fee' },
+          { description: '3-month initial term, then month-to-month' },
         ],
         callToAction: {
           text: 'Get Started',
@@ -172,7 +194,7 @@ const faqSchema = {
   />
 
   <div class="max-w-3xl mx-auto px-4 sm:px-6 -mt-8 mb-16 text-center">
-    <p class="text-sm text-gray-600 dark:text-slate-400">
+    <p class="text-base text-gray-600 dark:text-slate-400">
       Need more help than your monthly allowance covers? Additional support for members is <strong>$99/hr</strong>
       (billed in 15-minute increments; onsite visits have a one-hour minimum). New memberships begin with a 3-month initial
       term, then continue month-to-month.
@@ -183,8 +205,8 @@ const faqSchema = {
 
   <section class="max-w-5xl mx-auto px-4 sm:px-6 mb-16">
     <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl text-center mb-8">Compare Plans</h2>
-    <div class="overflow-x-auto rounded-lg border border-brand-light/20">
-      <table class="w-full text-sm text-left border-collapse">
+    <div class="hidden md:block overflow-x-auto rounded-lg border border-brand-light/20">
+      <table class="w-full text-base text-left border-collapse">
         <thead class="bg-brand-accent/10 dark:bg-brand-light">
           <tr>
             <th class="px-4 py-3 font-semibold text-brand-dark dark:text-white">&nbsp;</th>
@@ -197,17 +219,40 @@ const faqSchema = {
           {
             comparisonRows.map((row, i) => (
               <tr class={i % 2 === 0 ? 'bg-white dark:bg-brand-medium' : 'bg-brand-accent/5 dark:bg-brand-light/30'}>
-                <td class="px-4 py-3 font-medium text-brand-dark/80 dark:text-secondary">{row.label}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.essentials}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.complete}</td>
-                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-secondary">{row.concierge}</td>
+                <td class="px-4 py-3 font-medium text-brand-dark/80 dark:text-white">{row.label}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.essentials}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.complete}</td>
+                <td class="px-4 py-3 text-center text-brand-dark/70 dark:text-white">{row.concierge}</td>
               </tr>
             ))
           }
         </tbody>
       </table>
     </div>
+    <div class="md:hidden space-y-6">
+      {
+        comparisonPlans.map((plan) => (
+          <div class="rounded-lg border border-brand-light/20 overflow-hidden">
+            <h3 class="bg-brand-accent/10 dark:bg-brand-light px-4 py-3 text-lg font-semibold text-brand-dark dark:text-white">
+              {plan.name}
+            </h3>
+            <dl class="divide-y divide-brand-light/20">
+              {comparisonRows.map((row) => (
+                <div class="flex justify-between gap-4 px-4 py-3 bg-white dark:bg-brand-medium">
+                  <dt class="text-brand-dark/80 dark:text-white">{row.label}</dt>
+                  <dd class="text-right font-medium text-brand-dark/70 dark:text-white">{row[plan.key]}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        ))
+      }
+    </div>
   </section>
+
+  <p class="text-base text-gray-500 dark:text-slate-500 text-center max-w-3xl mx-auto px-4 sm:px-6 mb-16">
+    *New memberships require a 3-month initial commitment, then continue month-to-month.
+  </p>
 
   <!-- Hourly / Non-Member Rate Callout ******************* -->
 
@@ -223,7 +268,10 @@ const faqSchema = {
         <span class="text-4xl font-extrabold dark:text-white">$129.99</span>
         <span class="text-base text-gray-600 dark:text-slate-400 ml-2">/hour</span>
       </div>
-      <p class="text-sm text-gray-500 dark:text-slate-500 mb-6">Two-hour minimum ($259.98 minimum charge)</p>
+      <p class="text-base text-gray-500 dark:text-slate-500 mb-6">Two-hour minimum ($259.98 minimum charge)</p>
+      <p class="text-base text-gray-600 dark:text-slate-400 mb-6">
+        Already a member? You pay a discounted <strong>$99/hour</strong> instead.
+      </p>
       <Button variant="primary" href="/contact" text="Book a Visit" icon="tabler:calendar" />
     </div>
   </section>
@@ -231,14 +279,16 @@ const faqSchema = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faqs"
     title="Membership FAQs"
     subtitle="Questions about how Mobile-Tech membership works."
     columns={1}
+    classes={{ container: 'max-w-3xl' }}
     items={[
       {
         title: 'How is this different from a normal computer repair visit?',
         description:
-          "Most repair shops only show up after something breaks. A membership is an ongoing relationship - we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
+          "Most repair shops only show up after something breaks. A membership is an ongoing relationship: we get to know your home's technology, watch for problems proactively, and are already familiar with your setup when you need help. It's comprehensive coverage instead of one-off break-fix.",
       },
       {
         title: 'What happens if I need more help than my included time?',
@@ -248,7 +298,7 @@ const faqSchema = {
       {
         title: 'What is the Setup & Home Tech Survey?',
         description:
-          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup. This one time fee also covers your first month of membership.",
+          "It's a working onboarding visit, not just a signup fee. We review your computers, network, devices, and accounts, then build your household's technology profile so every future visit starts with us already knowing your setup.",
       },
       {
         title: 'Is there a minimum commitment?',
@@ -263,12 +313,12 @@ const faqSchema = {
       {
         title: 'What is not covered by a membership?',
         description:
-          'Memberships cover ongoing troubleshooting, management, and support for the technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new purchase setup, or a security camera system installation, are scoped and quoted separately.',
+          'Memberships cover ongoing troubleshooting, management, and support for the covered technology you already have. Larger projects, like a whole-home Wi-Fi redesign, new device purchase and setup, or a security camera system installation, are scoped and quoted separately.',
       },
       {
         title: 'What does membership actually mean, beyond the price?',
         description:
-          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-secondary">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
+          'Membership is a relationship, not just a support plan. See our <a href="/membership-values" class="underline text-primary dark:text-white">Membership Values</a> page for what we promise you, what we ask of you in return, and how we handle it on the rare occasion something isn\'t working.',
       },
     ]}
   />

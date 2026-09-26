@@ -327,12 +327,23 @@ export async function getImagesOptimized(
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });
   breakpoints = [...new Set(breakpoints)].sort((a, b) => a - b);
 
-  const srcset = (await transform(image, breakpoints, Number(width) || undefined, Number(height) || undefined, format))
-    .map(({ src, width }) => `${src} ${width}w`)
-    .join(', ');
+  const results = await transform(image, breakpoints, Number(width) || undefined, Number(height) || undefined, format);
+  const srcset = results.map(({ src, width }) => `${src} ${width}w`).join(', ');
+
+  // Prefer the variant matching the requested display width as the plain `src` fallback
+  // (used by browsers that don't support srcset, and by anything reading `img.src` directly);
+  // otherwise fall back to the smallest generated variant; else fall back to the original
+  // untouched asset (old behavior) if `results` is empty (e.g. width/aspectRatio missing).
+  const fallbackWidth = width || breakpoints[0];
+  const fallbackResult =
+    results.length === 0
+      ? undefined
+      : (results.find((r) => r.width === fallbackWidth) ??
+        results.reduce((smallest, r) => (r.width < smallest.width ? r : smallest)));
+  const fallbackSrc = fallbackResult?.src ?? (typeof image === 'string' ? image : image.src);
 
   return {
-    src: typeof image === 'string' ? image : image.src,
+    src: fallbackSrc,
     attributes: {
       width: width,
       height: height,

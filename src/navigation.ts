@@ -4,6 +4,10 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'FAQ',
+      href: getPermalink('/pricing') + '#faqs',
+    },
+    {
       text: 'Contact',
       href: getPermalink('/contact'),
     },

@@ -6,9 +6,10 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import Button from '~/components/ui/Button.astro';
+import CommonProblems from '~/components/widgets/CommonProblems.astro';
 
 const metadata = {
-  title: 'Residential Tech Support Services - Mobile-Tech, LLC',
+  title: 'Residential Tech Support Services',
   description:
     'Ongoing personal IT department membership plans and one-time computer help for Tucson-area homes. Mobile-Tech gets to know your home and is there when something breaks.',
 };
@@ -39,7 +40,7 @@ const serviceSchema = {
   <Hero
     tagline="Your Personal IT Department"
     title="Home Technology Support in Tucson"
-    subtitle="We help families and individuals with all their home technology needs.  Our ongoing membership gets to know you and your home, watches over it proactively, and is there when something goes wrong. Prefer one-time help instead? We do that too."
+    subtitle="We help families and individuals with all their home technology needs. Our ongoing membership gets to know you and your home, watches over it proactively, and is there when something goes wrong. Prefer one-time help instead? We do that too."
     actions={[
       {
         variant: 'primary',
@@ -63,24 +64,24 @@ const serviceSchema = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Now Offering: Personal IT Department Memberships"
+    title="A Personal IT Department for Your Home"
     subtitle="Instead of calling a stranger every time something breaks, get an ongoing relationship with a local team that already knows your home."
     columns={3}
     items={[
       {
-        title: 'Home Essentials - $79/mo',
+        title: 'Home Essentials ($79/mo)',
         description:
           '<strong>"Teach me and back me up."</strong> Guided self-service with a trusted backstop when you get stuck.',
         icon: 'tabler:device-laptop',
       },
       {
-        title: 'Home Complete - $149/mo',
+        title: 'Home Complete ($149/mo)',
         description:
-          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details along side you.',
+          '<strong>"Help me manage it."</strong> Our most popular membership for a typical household that wants us to handle the details alongside you.',
         icon: 'tabler:home-cog',
       },
       {
-        title: 'Home Concierge - $229+/mo',
+        title: 'Home Concierge ($229+/mo)',
         description:
           '<strong>"Handle it for me."</strong> Premium and comprehensive coverage for larger households and families.',
         icon: 'tabler:crown',
@@ -180,7 +181,7 @@ const serviceSchema = {
       {
         title: 'Windows user?',
         description:
-          "We can help you find a PC that meets your needs, whether it's a new computer or an upgrade to your existing one. Our goal is to help your purchase a computer that will last for years to come.",
+          "We can help you find a PC that meets your needs, whether it's a new computer or an upgrade to your existing one. Our goal is to help you purchase a computer that will last for years to come.",
         icon: 'tabler:brand-windows',
       },
     ]}
@@ -210,15 +211,17 @@ const serviceSchema = {
         icon: 'tabler:users',
       },
       {
-        title: 'Same-Day Service Available',
+        title: 'Priority Support for Critical Issues',
         description:
-          'Need help urgently? We often can come the same day you call, especially for critical issues that affect your daily routine.',
+          "Some technology problems need immediate attention. Whether you're unable to work, connect, or access essential devices, contact us to discuss priority scheduling and expedited support.",
         icon: 'tabler:clock',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Professional home tech support',
+      src: '~/assets/images/devan-assisting-client.jpg',
+      alt: 'Devan from Mobile-Tech helping a customer with her laptop at home',
+      width: 1536,
+      height: 1024,
     }}
   >
     <Fragment slot="content">
@@ -229,46 +232,9 @@ const serviceSchema = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Common Problems (problem -> outcome) ******************* -->
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: '"My computer is so slow I want to throw it out the window"',
-        description:
-          'We hear this all the time! Usually it just needs a good cleaning, virus removal, and some optimization. Most computers can run like new again.',
-        icon: 'tabler:device-desktop',
-      },
-      {
-        title: '"I keep getting scary messages about viruses"',
-        description:
-          'These are often fake scare tactics, but we can remove real scams or warnings and fix vulnerabilities. We will show you how to tell the difference between real and fake threats.',
-        icon: 'tabler:alert-triangle',
-      },
-      {
-        title: '"My WiFi doesn\'t work in my bedroom"',
-        description:
-          'Dead zones are common in larger homes. We can extend your WiFi coverage so you get strong internet everywhere in your house.',
-        icon: 'tabler:wifi-off',
-      },
-      {
-        title: '"I can\'t remember any of my passwords"',
-        description:
-          'Password managers make this easy! We set up a secure system so you only need to remember one master password for everything.',
-        icon: 'tabler:key',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Common computer problems solved',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Common Problems We Solve</h3>
-      These are real things our customers tell us every day. Sound familiar? We can help!
-    </Fragment>
-  </Content>
+  <CommonProblems showImage={false} />
 
   <!-- CallToAction Widget *********** -->
 
@@ -288,6 +254,6 @@ const serviceSchema = {
       },
     ]}
     title="Ready for a Personal IT Department of Your Own?"
-    subtitle="See our membership plans, or book a one-time visit. Either way, we're here to help. Same-day service is often available."
+    subtitle="See our membership plans, or book a one-time visit. Either way, we're here to help. Priority support is available for critical issues."
   />
 </Layout>

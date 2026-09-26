@@ -6,9 +6,10 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
 
 const metadata = {
-  title: 'About Mobile-Tech, LLC',
+  title: 'About Us',
   description:
     'Mobile-Tech, LLC has served Tucson, Arizona homes and businesses since 2005 with honest, patient technology support, residential IT memberships, and enterprise infrastructure solutions.',
 };
@@ -22,22 +23,68 @@ const metadata = {
     image={{
       src: '~/assets/images/mt-logo-transparent-graphic-only.png',
       alt: 'Mobile-Tech LLC Logo',
-      class: 'w-64 h-auto mx-auto object-contain',
-      width: undefined,
-      height: undefined,
+      class: 'w-80 h-auto mx-auto object-contain',
+      width: 320,
+      height: 320,
+      widths: [320, 640],
+      sizes: '20rem',
     }}
   >
     <Fragment slot="title">
       Serving Tucson Since <br />
-      <span class="text-primary dark:text-secondary">2005</span>
+      <span class="text-primary dark:text-white">2005</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       Mobile-Tech, LLC has been providing patient, honest technology support to Tucson families and businesses for over
-      two decades. We solve all technology problems while teaching you the best practices for security and maintenance -
+      two decades. We solve all technology problems while teaching you the best practices for security and maintenance,
       because we'd rather empower you than create dependency.
     </Fragment>
   </Hero>
+
+  <!-- Meet the Team ******************* -->
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mb-16">
+    <div class="grid gap-12 md:grid-cols-2 md:gap-10">
+      <div class="flex flex-col items-center text-center">
+        <Image
+          src="~/assets/images/matt-headshot.jpg"
+          alt="Matt, Founder and Chief Technologist at Mobile-Tech, LLC"
+          class="w-48 h-48 mb-6 rounded-full object-cover object-top shadow-lg"
+          width={192}
+          height={288}
+          widths={[192, 384]}
+          sizes="12rem"
+        />
+        <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Meet Matt</h2>
+        <p class="text-primary dark:text-white font-semibold mb-3">Founder &amp; Chief Technologist</p>
+        <p class="text-gray-600 dark:text-slate-400">
+          Hey, I'm Matt, a second-generation Tucson native. My technology career includes work at the University of
+          Arizona and global companies, keeping computers, networks, and cloud systems running smoothly. I enjoy helping
+          people and families throughout Tucson, taking time to answer your questions, solve problems, and help you feel
+          comfortable with technology.
+        </p>
+      </div>
+      <div class="flex flex-col items-center text-center">
+        <Image
+          src="~/assets/images/devan-headshot.jpg"
+          alt="Devan, Senior Technician at Mobile-Tech, LLC"
+          class="w-48 h-48 mb-6 rounded-full object-cover object-top shadow-lg"
+          width={192}
+          height={240}
+          widths={[192, 384]}
+          sizes="12rem"
+        />
+        <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl">Meet Devan</h2>
+        <p class="text-primary dark:text-white font-semibold mb-3">Senior Technician</p>
+        <p class="text-gray-600 dark:text-slate-400">
+          Hi, I'm Devan. Tucson is home, and the people I help are my neighbors, so I treat every visit the way I'd want
+          someone to treat my own family: patient, honest, and never in a rush. I'll fix what's wrong, explain what
+          happened in plain English, and make sure you walk away more confident, not more dependent.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Stats Widget ****************** -->
 
@@ -50,6 +97,21 @@ const metadata = {
       { title: 'Families and Businesses Served', amount: '100+' },
     ]}
   />
+
+  <!-- About Banner ******************* -->
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mb-4">
+    <Image
+      src="~/assets/images/about-banner.jpg"
+      alt="Devan from Mobile-Tech helping a Tucson couple on a laptop at sunset, with the words Your Personal IT Department for the Home"
+      class="w-full h-auto rounded-xl shadow-lg"
+      width={2034}
+      height={773}
+      widths={[400, 768, 1280, 2032]}
+      sizes="(min-width: 1536px) 1232px, (min-width: 1024px) 976px, 100vw"
+      layout="responsive"
+    />
+  </section>
 
   <!-- Features3 Widget ************** -->
 
@@ -89,7 +151,7 @@ const metadata = {
       {
         title: 'Computer Repair & Upgrades',
         description:
-          'Speed optimization, virus removal, RAM/SSD upgrades, and system reimaging - all without data loss.',
+          'Speed optimization, virus removal, RAM/SSD upgrades, and system reimaging, all without data loss.',
         icon: 'tabler:device-desktop',
       },
       {
@@ -121,10 +183,6 @@ const metadata = {
         icon: 'tabler:brand-apple',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Technology Support Services',
-    }}
   />
 
   <!-- Steps2 Widget ****************** -->
@@ -141,7 +199,7 @@ const metadata = {
       {
         title: 'Simplicity and Repeatability',
         description:
-          'We prioritize simple, reliable solutions that work consistently over time. This is why we often recommend Macs - they provide the simplicity our customers value.',
+          'We prioritize simple, reliable solutions that work consistently over time. This is why we often recommend Macs. They provide the simplicity our customers value.',
       },
       {
         title: 'Honest, Patient Service',
@@ -155,7 +213,7 @@ const metadata = {
 
   <Steps2
     title="Our Journey"
-    subtitle="From our founding in May 2005 to today, Mobile-Tech, LLC has consistently strived to provide excellent service while solving all technology problems - big and small."
+    subtitle="From our founding in May 2005 to today, Mobile-Tech, LLC has consistently strived to provide excellent service while solving all technology problems, big and small."
     isReversed={true}
     callToAction={{
       text: 'Contact Us Today',
@@ -193,7 +251,7 @@ const metadata = {
       {
         title: 'Tucson, Arizona',
         description:
-          'Mobile service throughout the greater Tucson area - we bring our expertise directly to your location.',
+          'Mobile service throughout the greater Tucson area. We bring our expertise directly to your location.',
       },
       {
         title: 'Mobile-First Service',
@@ -217,7 +275,7 @@ const metadata = {
       {
         title: 'Call Us Today',
         description:
-          'Speak directly with our tech support team. Same-day service available for urgent issues. Phone: 520-314-7152',
+          'Speak directly with our tech support team. For critical issues, ask about priority scheduling. Phone: 520-314-7152',
         icon: 'tabler:phone',
       },
       {
