@@ -5,6 +5,7 @@ import Prices from '~/components/widgets/Pricing.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Button from '~/components/ui/Button.astro';
+import { intakeFormFor } from '~/forms';
 
 const metadata = {
   title: 'Membership Pricing',
@@ -141,8 +142,9 @@ const faqSchema = {
         ],
         callToAction: {
           text: 'Get Started',
-          href: '/contact',
-          icon: 'tabler:calendar',
+          href: intakeFormFor('Home Essentials'),
+          target: '_blank',
+          icon: 'tabler:clipboard-text',
         },
       },
       {
@@ -162,8 +164,9 @@ const faqSchema = {
         ],
         callToAction: {
           text: 'Get Started',
-          href: '/contact',
-          icon: 'tabler:calendar',
+          href: intakeFormFor('Home Complete'),
+          target: '_blank',
+          icon: 'tabler:clipboard-text',
         },
         hasRibbon: true,
         ribbonTitle: 'Most Popular',
@@ -186,8 +189,9 @@ const faqSchema = {
         ],
         callToAction: {
           text: 'Get Started',
-          href: '/contact',
-          icon: 'tabler:calendar',
+          href: intakeFormFor('Home Concierge'),
+          target: '_blank',
+          icon: 'tabler:clipboard-text',
         },
       },
     ]}

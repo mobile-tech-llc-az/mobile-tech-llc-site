@@ -1,4 +1,5 @@
 import { getPermalink } from './utils/permalinks';
+import { TESTIMONIAL_FORM_URL } from './forms';
 // import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
@@ -172,6 +173,7 @@ export const footerData = {
       links: [
         { text: 'About', href: getPermalink('/about') },
         { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'Share Your Experience', href: TESTIMONIAL_FORM_URL },
       ],
     },
     // Commented out for future use
